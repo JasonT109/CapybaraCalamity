@@ -1,0 +1,581 @@
+fileFormatVersion: 2
+guid: 2bc63e52410903642b64096b51314cb7
+timeCreated: 1465550227
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: bn_clav_l_01
+    100002: bn_clav_r_01
+    100004: bn_core_01
+    100006: bn_ear_l_01
+    100008: bn_ear_r_01
+    100010: bn_elbow_l_01
+    100012: bn_elbow_r_01
+    100014: bn_eyel_l_01
+    100016: bn_eyel_r_01
+    100018: bn_eyelash_l_01
+    100020: bn_eyelash_r_01
+    100022: bn_eyelid_l_01
+    100024: bn_eyelid_r_01
+    100026: bn_foot_l_01
+    100028: bn_foot_r_01
+    100030: bn_hair1_01
+    100032: bn_hair1_02
+    100034: bn_hair2_01
+    100036: bn_hair2_02
+    100038: bn_hair3_01
+    100040: bn_hair3_02
+    100042: bn_hair3_03
+    100044: bn_hair4_01
+    100046: bn_hair4_02
+    100048: bn_hair4_03
+    100050: bn_hair4_04
+    100052: bn_hair5_01
+    100054: bn_hair5_02
+    100056: bn_hair5_03
+    100058: bn_hair5_04
+    100060: bn_hand_l_01
+    100062: bn_hand_r_01
+    100064: bn_head_01
+    100066: bn_hip_l_01
+    100068: bn_hip_r_01
+    100070: bn_jaw_01
+    100072: bn_knee_l_01
+    100074: bn_knee_r_01
+    100076: bn_neck_01
+    100078: bn_neck_02
+    100080: bn_root_01
+    100082: bn_shoulder_l_01
+    100084: bn_shoulder_r_01
+    100086: bn_sideburns_l_01
+    100088: bn_sideburns_l_02
+    100090: bn_sideburns_r_01
+    100092: bn_sideburns_r_02
+    100094: bn_spine_01
+    100096: bn_spine_02
+    100098: bn_spine_03
+    100100: bn_tail1_01
+    100102: bn_tail1_02
+    100104: bn_tail1_03
+    100106: bn_tail1_04
+    100108: bn_tail2_01
+    100110: bn_tail2_02
+    100112: bn_tail2_03
+    100114: bn_tail2_04
+    100116: bn_tail3_01
+    100118: bn_tail3_02
+    100120: bn_tail3_03
+    100122: bn_tail3_04
+    100124: bn_tail3_05
+    100126: bn_tail4_01
+    100128: bn_tail4_02
+    100130: bn_tail4_03
+    100132: bn_tail4_04
+    100134: bn_toe_l_01
+    100136: bn_toe_r_01
+    100138: bn_wing2_l_01
+    100140: bn_wing2_l_02
+    100142: bn_wing2_r_01
+    100144: bn_wing2_r_02
+    100146: cn_eye_l_base_01_DEL
+    100148: cn_eye_r_base_01_DEL
+    100150: cn_eyelash_l_base_01_DEL
+    100152: cn_eyelash_r_base_01_DEL
+    100154: cn_eyelid_l_base_01_DEL
+    100156: cn_eyelid_r_base_01_DEL
+    100158: cn_jaw_base_01_DEL
+    100160: Rainbow_Dash001
+    100162: //RootNode
+    100164: x_clav_dummy_l_01_DEL
+    100166: x_clav_dummy_r_01_DEL
+    100168: x_ear_l_base_dummy_DEL
+    100170: x_ear_r_base_dummy_DEL
+    100172: x_eye_l_base_01_DEL
+    100174: x_eye_l_base_dummy_DEL
+    100176: x_eye_r_base_01_DEL
+    100178: x_eye_r_base_dummy_DEL
+    100180: x_eyelash_l_base_01_DEL
+    100182: x_eyelash_r_base_01_DEL
+    100184: x_eyelid_l_base_01_DEL
+    100186: x_eyelid_r_base_01_DEL
+    100188: x_hair1_base_dummy_DEL
+    100190: x_hair2_base_dummy_DEL
+    100192: x_hair3_base_dummy_DEL
+    100194: x_hair4_base_dummy_DEL
+    100196: x_hair5_base_dummy_DEL
+    100198: x_head_dummy_DEL
+    100200: x_headUp_DEL
+    100202: x_jaw_base_01_DEL
+    100204: x_jaw_base_dummy_DEL
+    100206: x_neck_base_dummy_DEL
+    100208: x_sideburns_l_base_dummy_DEL
+    100210: x_sideburns_r_base_dummy_DEL
+    100212: x_spine_base_dummy_DEL
+    100214: x_tail1_base_dummy_DEL
+    100216: x_tail2_base_dummy_DEL
+    100218: x_tail3_base_dummy_DEL
+    100220: x_tail4_base_dummy_DEL
+    100222: x_wing1_l_base_dummy_DEL
+    100224: x_wing1_r_base_dummy_DEL
+    100226: x_wing2_l_base_dummy_DEL
+    100228: x_wing2_r_base_dummy_DEL
+    400000: bn_clav_l_01
+    400002: bn_clav_r_01
+    400004: bn_core_01
+    400006: bn_ear_l_01
+    400008: bn_ear_r_01
+    400010: bn_elbow_l_01
+    400012: bn_elbow_r_01
+    400014: bn_eyel_l_01
+    400016: bn_eyel_r_01
+    400018: bn_eyelash_l_01
+    400020: bn_eyelash_r_01
+    400022: bn_eyelid_l_01
+    400024: bn_eyelid_r_01
+    400026: bn_foot_l_01
+    400028: bn_foot_r_01
+    400030: bn_hair1_01
+    400032: bn_hair1_02
+    400034: bn_hair2_01
+    400036: bn_hair2_02
+    400038: bn_hair3_01
+    400040: bn_hair3_02
+    400042: bn_hair3_03
+    400044: bn_hair4_01
+    400046: bn_hair4_02
+    400048: bn_hair4_03
+    400050: bn_hair4_04
+    400052: bn_hair5_01
+    400054: bn_hair5_02
+    400056: bn_hair5_03
+    400058: bn_hair5_04
+    400060: bn_hand_l_01
+    400062: bn_hand_r_01
+    400064: bn_head_01
+    400066: bn_hip_l_01
+    400068: bn_hip_r_01
+    400070: bn_jaw_01
+    400072: bn_knee_l_01
+    400074: bn_knee_r_01
+    400076: bn_neck_01
+    400078: bn_neck_02
+    400080: bn_root_01
+    400082: bn_shoulder_l_01
+    400084: bn_shoulder_r_01
+    400086: bn_sideburns_l_01
+    400088: bn_sideburns_l_02
+    400090: bn_sideburns_r_01
+    400092: bn_sideburns_r_02
+    400094: bn_spine_01
+    400096: bn_spine_02
+    400098: bn_spine_03
+    400100: bn_tail1_01
+    400102: bn_tail1_02
+    400104: bn_tail1_03
+    400106: bn_tail1_04
+    400108: bn_tail2_01
+    400110: bn_tail2_02
+    400112: bn_tail2_03
+    400114: bn_tail2_04
+    400116: bn_tail3_01
+    400118: bn_tail3_02
+    400120: bn_tail3_03
+    400122: bn_tail3_04
+    400124: bn_tail3_05
+    400126: bn_tail4_01
+    400128: bn_tail4_02
+    400130: bn_tail4_03
+    400132: bn_tail4_04
+    400134: bn_toe_l_01
+    400136: bn_toe_r_01
+    400138: bn_wing2_l_01
+    400140: bn_wing2_l_02
+    400142: bn_wing2_r_01
+    400144: bn_wing2_r_02
+    400146: cn_eye_l_base_01_DEL
+    400148: cn_eye_r_base_01_DEL
+    400150: cn_eyelash_l_base_01_DEL
+    400152: cn_eyelash_r_base_01_DEL
+    400154: cn_eyelid_l_base_01_DEL
+    400156: cn_eyelid_r_base_01_DEL
+    400158: cn_jaw_base_01_DEL
+    400160: Rainbow_Dash001
+    400162: //RootNode
+    400164: x_clav_dummy_l_01_DEL
+    400166: x_clav_dummy_r_01_DEL
+    400168: x_ear_l_base_dummy_DEL
+    400170: x_ear_r_base_dummy_DEL
+    400172: x_eye_l_base_01_DEL
+    400174: x_eye_l_base_dummy_DEL
+    400176: x_eye_r_base_01_DEL
+    400178: x_eye_r_base_dummy_DEL
+    400180: x_eyelash_l_base_01_DEL
+    400182: x_eyelash_r_base_01_DEL
+    400184: x_eyelid_l_base_01_DEL
+    400186: x_eyelid_r_base_01_DEL
+    400188: x_hair1_base_dummy_DEL
+    400190: x_hair2_base_dummy_DEL
+    400192: x_hair3_base_dummy_DEL
+    400194: x_hair4_base_dummy_DEL
+    400196: x_hair5_base_dummy_DEL
+    400198: x_head_dummy_DEL
+    400200: x_headUp_DEL
+    400202: x_jaw_base_01_DEL
+    400204: x_jaw_base_dummy_DEL
+    400206: x_neck_base_dummy_DEL
+    400208: x_sideburns_l_base_dummy_DEL
+    400210: x_sideburns_r_base_dummy_DEL
+    400212: x_spine_base_dummy_DEL
+    400214: x_tail1_base_dummy_DEL
+    400216: x_tail2_base_dummy_DEL
+    400218: x_tail3_base_dummy_DEL
+    400220: x_tail4_base_dummy_DEL
+    400222: x_wing1_l_base_dummy_DEL
+    400224: x_wing1_r_base_dummy_DEL
+    400226: x_wing2_l_base_dummy_DEL
+    400228: x_wing2_r_base_dummy_DEL
+    2300000: cn_eye_l_base_01_DEL
+    2300002: cn_eye_r_base_01_DEL
+    2300004: cn_eyelash_l_base_01_DEL
+    2300006: cn_eyelash_r_base_01_DEL
+    2300008: cn_eyelid_l_base_01_DEL
+    2300010: cn_eyelid_r_base_01_DEL
+    3300000: cn_eye_l_base_01_DEL
+    3300002: cn_eye_r_base_01_DEL
+    3300004: cn_eyelash_l_base_01_DEL
+    3300006: cn_eyelash_r_base_01_DEL
+    3300008: cn_eyelid_l_base_01_DEL
+    3300010: cn_eyelid_r_base_01_DEL
+    4300000: Rainbow_Dash001
+    4300002: cn_eyelid_r_base_01_DEL
+    4300004: cn_eyelash_r_base_01_DEL
+    4300006: cn_eyelid_l_base_01_DEL
+    4300008: cn_eyelash_l_base_01_DEL
+    4300010: cn_eye_r_base_01_DEL
+    4300012: cn_eye_l_base_01_DEL
+    7400000: idle
+    9500000: //RootNode
+    13700000: Rainbow_Dash001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: idle
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: bn_root_01
+        weight: 1
+      - path: bn_root_01/bn_core_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/bn_hip_l_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/bn_hip_l_01/bn_knee_l_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/bn_hip_l_01/bn_knee_l_01/bn_foot_l_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/bn_hip_l_01/bn_knee_l_01/bn_foot_l_01/bn_toe_l_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/bn_hip_r_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/bn_hip_r_01/bn_knee_r_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/bn_hip_r_01/bn_knee_r_01/bn_foot_r_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/bn_hip_r_01/bn_knee_r_01/bn_foot_r_01/bn_toe_r_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/bn_clav_l_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/bn_clav_l_01/x_clav_dummy_l_01_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/bn_clav_l_01/x_clav_dummy_l_01_DEL/bn_shoulder_l_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/bn_clav_l_01/x_clav_dummy_l_01_DEL/bn_shoulder_l_01/bn_elbow_l_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/bn_clav_l_01/x_clav_dummy_l_01_DEL/bn_shoulder_l_01/bn_elbow_l_01/bn_hand_l_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/bn_clav_r_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/bn_clav_r_01/x_clav_dummy_r_01_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/bn_clav_r_01/x_clav_dummy_r_01_DEL/bn_shoulder_r_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/bn_clav_r_01/x_clav_dummy_r_01_DEL/bn_shoulder_r_01/bn_elbow_r_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/bn_clav_r_01/x_clav_dummy_r_01_DEL/bn_shoulder_r_01/bn_elbow_r_01/bn_hand_r_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_ear_l_base_dummy_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_ear_l_base_dummy_DEL/bn_ear_l_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_ear_r_base_dummy_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_ear_r_base_dummy_DEL/bn_ear_r_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_eye_l_base_01_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_eye_l_base_01_DEL/cn_eye_l_base_01_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_eye_l_base_01_DEL/cn_eye_l_base_01_DEL/bn_eyel_l_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_eye_l_base_dummy_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_eye_r_base_01_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_eye_r_base_01_DEL/cn_eye_r_base_01_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_eye_r_base_01_DEL/cn_eye_r_base_01_DEL/bn_eyel_r_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_eye_r_base_dummy_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_eyelash_l_base_01_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_eyelash_l_base_01_DEL/cn_eyelash_l_base_01_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_eyelash_l_base_01_DEL/cn_eyelash_l_base_01_DEL/bn_eyelash_l_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_eyelash_r_base_01_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_eyelash_r_base_01_DEL/cn_eyelash_r_base_01_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_eyelash_r_base_01_DEL/cn_eyelash_r_base_01_DEL/bn_eyelash_r_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_eyelid_l_base_01_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_eyelid_l_base_01_DEL/cn_eyelid_l_base_01_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_eyelid_l_base_01_DEL/cn_eyelid_l_base_01_DEL/bn_eyelid_l_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_eyelid_r_base_01_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_eyelid_r_base_01_DEL/cn_eyelid_r_base_01_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_eyelid_r_base_01_DEL/cn_eyelid_r_base_01_DEL/bn_eyelid_r_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_hair1_base_dummy_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_hair1_base_dummy_DEL/bn_hair1_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_hair1_base_dummy_DEL/bn_hair1_01/bn_hair1_02
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_hair2_base_dummy_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_hair2_base_dummy_DEL/bn_hair2_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_hair2_base_dummy_DEL/bn_hair2_01/bn_hair2_02
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_hair3_base_dummy_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_hair3_base_dummy_DEL/bn_hair3_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_hair3_base_dummy_DEL/bn_hair3_01/bn_hair3_02
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_hair3_base_dummy_DEL/bn_hair3_01/bn_hair3_02/bn_hair3_03
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_hair4_base_dummy_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_hair4_base_dummy_DEL/bn_hair4_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_hair4_base_dummy_DEL/bn_hair4_01/bn_hair4_02
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_hair4_base_dummy_DEL/bn_hair4_01/bn_hair4_02/bn_hair4_03
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_hair4_base_dummy_DEL/bn_hair4_01/bn_hair4_02/bn_hair4_03/bn_hair4_04
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_hair5_base_dummy_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_hair5_base_dummy_DEL/bn_hair5_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_hair5_base_dummy_DEL/bn_hair5_01/bn_hair5_02
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_hair5_base_dummy_DEL/bn_hair5_01/bn_hair5_02/bn_hair5_03
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_hair5_base_dummy_DEL/bn_hair5_01/bn_hair5_02/bn_hair5_03/bn_hair5_04
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_jaw_base_01_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_jaw_base_01_DEL/cn_jaw_base_01_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_jaw_base_01_DEL/cn_jaw_base_01_DEL/bn_jaw_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_jaw_base_dummy_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_sideburns_l_base_dummy_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_sideburns_l_base_dummy_DEL/bn_sideburns_l_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_sideburns_l_base_dummy_DEL/bn_sideburns_l_01/bn_sideburns_l_02
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_sideburns_r_base_dummy_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_sideburns_r_base_dummy_DEL/bn_sideburns_r_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_head_dummy_DEL/bn_head_01/x_sideburns_r_base_dummy_DEL/bn_sideburns_r_01/bn_sideburns_r_02
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_neck_base_dummy_DEL/bn_neck_01/bn_neck_02/x_headUp_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_wing1_l_base_dummy_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_wing1_r_base_dummy_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_wing2_l_base_dummy_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_wing2_l_base_dummy_DEL/bn_wing2_l_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_wing2_l_base_dummy_DEL/bn_wing2_l_01/bn_wing2_l_02
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_wing2_r_base_dummy_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_wing2_r_base_dummy_DEL/bn_wing2_r_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_spine_base_dummy_DEL/bn_spine_01/bn_spine_02/bn_spine_03/x_wing2_r_base_dummy_DEL/bn_wing2_r_01/bn_wing2_r_02
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_tail1_base_dummy_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_tail1_base_dummy_DEL/bn_tail1_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_tail1_base_dummy_DEL/bn_tail1_01/bn_tail1_02
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_tail1_base_dummy_DEL/bn_tail1_01/bn_tail1_02/bn_tail1_03
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_tail1_base_dummy_DEL/bn_tail1_01/bn_tail1_02/bn_tail1_03/bn_tail1_04
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_tail2_base_dummy_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_tail2_base_dummy_DEL/bn_tail2_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_tail2_base_dummy_DEL/bn_tail2_01/bn_tail2_02
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_tail2_base_dummy_DEL/bn_tail2_01/bn_tail2_02/bn_tail2_03
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_tail2_base_dummy_DEL/bn_tail2_01/bn_tail2_02/bn_tail2_03/bn_tail2_04
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_tail3_base_dummy_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_tail3_base_dummy_DEL/bn_tail3_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_tail3_base_dummy_DEL/bn_tail3_01/bn_tail3_02
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_tail3_base_dummy_DEL/bn_tail3_01/bn_tail3_02/bn_tail3_03
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_tail3_base_dummy_DEL/bn_tail3_01/bn_tail3_02/bn_tail3_03/bn_tail3_04
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_tail3_base_dummy_DEL/bn_tail3_01/bn_tail3_02/bn_tail3_03/bn_tail3_04/bn_tail3_05
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_tail4_base_dummy_DEL
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_tail4_base_dummy_DEL/bn_tail4_01
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_tail4_base_dummy_DEL/bn_tail4_01/bn_tail4_02
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_tail4_base_dummy_DEL/bn_tail4_01/bn_tail4_02/bn_tail4_03
+        weight: 1
+      - path: bn_root_01/bn_core_01/x_tail4_base_dummy_DEL/bn_tail4_01/bn_tail4_02/bn_tail4_03/bn_tail4_04
+        weight: 1
+      - path: Rainbow_Dash001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
