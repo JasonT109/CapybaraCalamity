@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
+using TouchScript.Gestures;
+using TouchScript.Hit;
 
 public class agent : MonoBehaviour
 {
@@ -17,6 +20,7 @@ public class agent : MonoBehaviour
 
     [Header("Ability configuration:")]
     public abilityHandler.Abilities Ability;
+    private abilityHandler _AbilityHandler;
 
     [Header ("Collision configuration:")]
     public Rigidbody RB;
@@ -34,8 +38,29 @@ public class agent : MonoBehaviour
     private SkinnedMeshRenderer[] _SkinnedMeshes;
 
     private GameObject UIScore;
+    private PressGesture _PressGesture;
 
-    void Start ()
+    private void OnEnable()
+    {
+        _PressGesture = GetComponent<PressGesture>();
+        _PressGesture.Pressed += PressHandler;
+    }
+
+    private void OnDisable()
+    {
+        _PressGesture.Pressed -= PressHandler;
+    }
+
+    private void PressHandler(object sender, EventArgs e)
+    {
+        var gesture = sender as PressGesture;
+        TouchHit hit;
+        gesture.GetTargetHitResult(out hit);
+
+        if (hit.Transform.gameObject == gameObject)
+            _AbilityHandler.SetAgentAbility(this);
+    }
+    void Start()
     {
         RB = GetComponent<Rigidbody>();
         CL = GetComponent<Collider>();
@@ -48,8 +73,9 @@ public class agent : MonoBehaviour
             {
                 SkinnedMesh.enabled = false;
                 ParachuteMesh = SkinnedMesh;
-            } 
+            }
         }
+        _AbilityHandler = GameObject.FindGameObjectWithTag("AbilityHandler").GetComponent<abilityHandler>();
     }
 	
 	void FixedUpdate ()
@@ -162,9 +188,10 @@ public class agent : MonoBehaviour
         {
             CurrentCollider = collisionInfo.collider;
             CanDig = true;
+
+            //fell too hard
             if (FallSpeed > SplatSpeed)
             {
-                //fell too hard
                 var uiScript = UIScore.GetComponent<uiScore>();
                 uiScript.addLostUnit();
 
@@ -176,15 +203,13 @@ public class agent : MonoBehaviour
         {
             if (collisionInfo.collider.tag == "agent")
             {
-                //quickly check that we are not inside the other agent, if so move us back
+                //Check that we are not inside the other agent, if so move us back
                 Vector3 pos1 = transform.position;
                 Vector3 pos2 = collisionInfo.collider.transform.position;
-                //Debug.Log(Vector3.Distance(pos1, pos2));
                 if (Vector3.Distance(pos1, pos2) < 0.29f)
                 {
                     if (pos1.x < pos2.x && Ability != abilityHandler.Abilities.Stopper)
                     {
-                        //Debug.Log("Found and agent inside another");
                         transform.position = new Vector3(transform.position.x - 0.01f,
                                               transform.position.y,
                                               transform.position.z);
@@ -224,10 +249,10 @@ public class agent : MonoBehaviour
                     tunnelRotation = 180;
                 }
 
-                //digging = true;
                 //let's make a tunnel
                 GameObject tunnelClone = Instantiate(Tunnel, transform.position + new Vector3(tunnelOffset, -0.16f, 0), Quaternion.identity) as GameObject;
                 tunnelClone.transform.rotation = Quaternion.AngleAxis(tunnelRotation, Vector3.up);
+                
                 //ignore the collision so we can travel through it
                 IgnoredCollider = collisionInfo.collider;
                 Physics.IgnoreCollision(CL, IgnoredCollider);
@@ -300,20 +325,15 @@ public class agent : MonoBehaviour
         }
         if (trigger.tag == "tunnel")
         {
-            //Debug.Log("Found a tunnel entrance");
             //cast a ray in current direction to find the trunk we want to travel through
             Ray ray = new Ray(transform.position, new Vector3(1.25f * MoveDir.x, 0, 0));
             int layerMask = 1 << 9;
 
-            //Debug.DrawLine(transform.position, transform.position + new Vector3(1.25f * moveDir.x, 0, 0), Color.red);
-
             RaycastHit hit;
             if (Physics.Raycast(ray.origin, ray.direction, out hit, 1.25f, layerMask))
             {
-                //Debug.Log("Found a trunk that we can pass through.");
                 if (!_CollisionTimingCheck)
                 {
-                    
                     IgnoredCollider = hit.collider;
                     Physics.IgnoreCollision(CL, IgnoredCollider);
                     _CollisionTimingCheck = true;
@@ -343,7 +363,6 @@ public class agent : MonoBehaviour
                 IgnoredCollider = null;
                 _CollisionTimingCheck = true;
                 StartCoroutine(TimingCheck(0.05F));
-                //digging = false;
             }
         }
     }

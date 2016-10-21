@@ -1,18 +1,21 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using TouchScript.Gestures;
+using TouchScript.Hit;
 
-public class abilityHandler : MonoBehaviour {
-
-
+public class abilityHandler : MonoBehaviour
+{
     public int NumDiggers = 0;
     public int NumGnawers = 0;
     public int NumFloaters = 0;
     public int NumStoppers = 0;
     public float TimeLimit = 30.0f;
     public GameObject HolePrefab;
-    private Vector3 HoleOffset = new Vector3(0, 0.145f, 0);
+    [HideInInspector]
+    public Vector3 HoleOffset = new Vector3(0, 0.145f, 0);
 
     public enum Abilities
     {
@@ -74,69 +77,61 @@ public class abilityHandler : MonoBehaviour {
 	
 	void Update ()
     {
-	    if (Input.GetMouseButtonDown(0))
-        {
-            Ray Ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit Hit;
-            if (Physics.Raycast(Ray.origin, Ray.direction, out Hit))
-            {
-                if (Hit.collider.tag == "agent")
-                {
-                    var SelectedAgent = Hit.collider.GetComponent<agent>();
-
-                    if (CurrentAbility == Abilities.Digger && !SelectedAgent.Falling && SelectedAgent.FallSpeed < 0.01 && SelectedAgent.CanDig && NumDiggers > 0)
-                    {
-                        if (SelectedAgent.Ability == Abilities.Stopper)
-                            SelectedAgent.ToggleStopper();
-
-                        GameObject HoleClone = Instantiate(HolePrefab, Hit.transform.position - HoleOffset, Quaternion.identity) as GameObject;
-
-                        var HoleScript = HoleClone.GetComponentInChildren<createHole>();
-                        HoleScript.digger = Hit.transform.gameObject;
-
-                        NumDiggers -= 1;
-                        DiggerCountText.text = "" + NumDiggers;
-                    }
-
-                    if (CurrentAbility == Abilities.Stopper && !SelectedAgent.Falling && SelectedAgent.FallSpeed < 0.01)
-                    {
-                        if (SelectedAgent.Ability != Abilities.Stopper && NumStoppers > 0)
-                        {
-                            NumStoppers -= 1;
-                            StopperCountText.text = "" + NumStoppers;
-                            SelectedAgent.ToggleStopper();
-                        }
-                        else if (SelectedAgent.Ability == Abilities.Stopper)
-                        {
-                            SelectedAgent.ToggleStopper();
-                        }
-                        
-                    }
-
-                    if (CurrentAbility == Abilities.Gnawer && !SelectedAgent.Falling && SelectedAgent.FallSpeed < 0.01 && NumGnawers > 0)
-                    {
-                        if (SelectedAgent.Ability != Abilities.Gnawer)
-                        {
-                            NumGnawers -= 1;
-                            GnawerCountText.text = "" + NumGnawers;
-                        }
-                        SelectedAgent.ToggleGnawer();
-                    }
-
-                    if (CurrentAbility == Abilities.Floater && NumFloaters > 0)
-                    {
-                        if (SelectedAgent.Ability != Abilities.Floater)
-                        {
-                            NumFloaters -= 1;
-                            FloaterCountText.text = "" + NumFloaters;
-                            SelectedAgent.ToggleFloater();
-                        }
-                    }
-                }
-            }
-        }
+	    
 	}
 
+    public void SetAgentAbility(agent SelectedAgent)
+    {
+        if (CurrentAbility == Abilities.Digger && !SelectedAgent.Falling && SelectedAgent.FallSpeed < 0.01 && SelectedAgent.CanDig && NumDiggers > 0)
+        {
+            if (SelectedAgent.Ability == Abilities.Stopper)
+                SelectedAgent.ToggleStopper();
+
+            GameObject HoleClone = Instantiate(HolePrefab, SelectedAgent.transform.position - HoleOffset, Quaternion.identity) as GameObject;
+
+            var HoleScript = HoleClone.GetComponentInChildren<createHole>();
+            HoleScript.digger = SelectedAgent.transform.gameObject;
+
+            NumDiggers -= 1;
+            DiggerCountText.text = "" + NumDiggers;
+        }
+
+        if (CurrentAbility == Abilities.Stopper && !SelectedAgent.Falling && SelectedAgent.FallSpeed < 0.01)
+        {
+            if (SelectedAgent.Ability != Abilities.Stopper && NumStoppers > 0)
+            {
+                NumStoppers -= 1;
+                StopperCountText.text = "" + NumStoppers;
+                SelectedAgent.ToggleStopper();
+            }
+            else if (SelectedAgent.Ability == Abilities.Stopper)
+            {
+                SelectedAgent.ToggleStopper();
+            }
+        }
+
+        if (CurrentAbility == Abilities.Gnawer && !SelectedAgent.Falling && SelectedAgent.FallSpeed < 0.01 && NumGnawers > 0)
+        {
+            if (SelectedAgent.Ability != Abilities.Gnawer)
+            {
+                NumGnawers -= 1;
+                GnawerCountText.text = "" + NumGnawers;
+            }
+            SelectedAgent.ToggleGnawer();
+        }
+
+        if (CurrentAbility == Abilities.Floater && NumFloaters > 0)
+        {
+            if (SelectedAgent.Ability != Abilities.Floater)
+            {
+                NumFloaters -= 1;
+                FloaterCountText.text = "" + NumFloaters;
+                SelectedAgent.ToggleFloater();
+            }
+        }
+    }
+
+    /** Resets the UI score. */
     public void ResetUICount()
     {
         NumDiggers = _InitDiggerCount;
@@ -150,6 +145,7 @@ public class abilityHandler : MonoBehaviour {
         StopperCountText.text = "" + NumStoppers;
     }
 
+    /** Sets an agents ability. */
     public void SetAbility (string Ability)
     {
         switch (Ability)

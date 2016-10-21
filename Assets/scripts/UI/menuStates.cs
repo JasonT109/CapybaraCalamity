@@ -153,7 +153,7 @@ public class menuStates : MonoBehaviour {
     public void loadNextLevel()
     {
         int loadedLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        int numberOfLevels = SceneManager.sceneCount;
+        int numberOfLevels = SceneManager.sceneCountInBuildSettings;
         if (loadedLevelIndex != (numberOfLevels - 1))
         {
             Debug.Log("Loading next scene " + loadedLevelIndex++);
