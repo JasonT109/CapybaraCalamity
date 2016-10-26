@@ -86,7 +86,7 @@ public class menuStates : MonoBehaviour {
         {
             spawner spawnerScript = s.GetComponent<spawner>();
             if (spawnerScript)
-                spawnerScript.resetSpawner();
+                spawnerScript.ResetSpawner();
         }
 
         if (!resultsScreen)

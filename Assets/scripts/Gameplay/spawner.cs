@@ -17,56 +17,52 @@ public class spawner : MonoBehaviour
     public string countDownText;
     public Text coundDownTextObject;
 
-    private float currentTime;
-    private float spawnTime;
-    private bool canSpawn = true;
-    private GameObject uiScore;
-    private int initNumAgents;
-    private float countDown;
+    private float _CurrentTime;
+    private float _SpawnTime;
+    private bool _CanSpawn = true;
+    private GameObject _uiScore;
+    private int _InitNumAgents;
+    private float _CountDown;
 
     void Start()
     {
-        initNumAgents = numberOfAgents;
-        uiScore = GameObject.FindGameObjectWithTag("UI");
-        var scoreScript = uiScore.gameObject.GetComponent<uiScore>();
+        _InitNumAgents = numberOfAgents;
+        _uiScore = GameObject.FindGameObjectWithTag("UI");
+        var scoreScript = _uiScore.gameObject.GetComponent<uiScore>();
         scoreScript.totalNumAgents += numberOfAgents;
-        currentTime = Time.timeSinceLevelLoad;
-        spawnTime = currentTime + timeToFirstSpawn;
-        countDown = timeToFirstSpawn;
+        _CurrentTime = Time.timeSinceLevelLoad;
+        _SpawnTime = _CurrentTime + timeToFirstSpawn;
+        _CountDown = timeToFirstSpawn;
         crateAnimator = crateMesh.GetComponent<Animator>();
     }
 
-    public void resetSpawner()
+    public void ResetSpawner()
     {
-        numberOfAgents = initNumAgents;
-        spawnTime = currentTime + timeToFirstSpawn;
-        countDown = timeToFirstSpawn;
+        numberOfAgents = _InitNumAgents;
+        _SpawnTime = _CurrentTime + timeToFirstSpawn;
+        _CountDown = timeToFirstSpawn;
         StopCoroutine("WaitAndSpawn");
-        canSpawn = true;
+        _CanSpawn = true;
     }
 
-    // Update is called once per frame
-    void Update() {
-        currentTime += Time.deltaTime;
-        countDown -= Time.deltaTime;
-        if (countDown > 0.5f)
-        {
-            countDownText = ("" + Mathf.Round(countDown));
-        }
-        else if (countDown <= 0.5f && countDown > -1.0f)
-        {
+    void Update()
+    {
+        _CurrentTime += Time.deltaTime;
+        _CountDown -= Time.deltaTime;
+
+        if (_CountDown > 0.5f)
+            countDownText = ("" + Mathf.Round(_CountDown));
+        else if (_CountDown <= 0.5f && _CountDown > -1.0f)
             countDownText = ("Here they come!");
-        }
         else
-        {
             countDownText = ("");
-        }
         
-        if (currentTime > spawnTime & canSpawn & numberOfAgents > 0)
+        if (_CurrentTime > _SpawnTime & _CanSpawn & numberOfAgents > 0)
         {
-            canSpawn = false;
+            _CanSpawn = false;
             StartCoroutine("WaitAndSpawn", timeInterval);
         }
+
         coundDownTextObject.text = countDownText;
     }
 
@@ -75,14 +71,18 @@ public class spawner : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
 
         crateAnimator.Play("box_shake", -1, 0.0f);
+
         GameObject newAgent;
         newAgent = Instantiate(agent, transform.position, transform.rotation) as GameObject;
+
         var agentScript = newAgent.GetComponent<agent>();
         agentScript.MoveDir.x = initialDirection;
+
         Rigidbody rb;
         rb = newAgent.GetComponent<Rigidbody>();
         rb.velocity = new Vector3(0, -1, 0);
-        canSpawn = true;
+
+        _CanSpawn = true;
         numberOfAgents -= 1;
     }
 }

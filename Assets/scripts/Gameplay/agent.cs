@@ -144,7 +144,7 @@ public class agent : MonoBehaviour
             gameObject.layer = 15;
             Ability = abilityHandler.Abilities.Stopper;
             RB.mass = 50.0f;
-            AgentAnim.Play("stopper_idle", -1, 0.0f);
+            AgentAnim.Play("stopper_in", -1, 0.0f);
         }
         else
         {
