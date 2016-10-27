@@ -536,6 +536,9 @@ ModelImporter:
     7400010: fall
     7400012: float
     7400014: stopper_in
+    7400016: fall_in
+    7400018: gnaw_right
+    7400020: gnaw_left
     9500000: //RootNode
     13700000: capy_geo
     13700002: eye_left
@@ -4157,6 +4160,1620 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: capy_geo
+        weight: 1
+      - path: char_para_leaf
+        weight: 1
+      - path: eye_left
+        weight: 1
+      - path: eye_right
+        weight: 1
+      - path: GRP_Character
+        weight: 1
+      - path: GRP_Character/GRP_Controls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/Character_LeftElbowAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/Character_LeftShoulderAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftElbowMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftElbowMod/c_LeftElbowMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftHandIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftHandIK/c_LeftHandIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftIndex1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftIndex1/c_LeftIndex1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftIndex2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftIndex2/c_LeftIndex2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftMiddle1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftMiddle1/c_LeftMiddle1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftMiddle2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftMiddle2/c_LeftMiddle2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftShoulderFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftShoulderFK/c_LeftShoulderFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftShoulderFK/c_LeftShoulderFK/GRP_c_LeftElbowFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftShoulderFK/c_LeftShoulderFK/GRP_c_LeftElbowFK/c_LeftElbowFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftThumb1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftThumb1/c_LeftThumb1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftThumb2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftThumb2/c_LeftThumb2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftThumb3
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftThumb3/c_LeftThumb3
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_LeftElbowMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_LeftElbowMOD/x_LeftElbowMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_LeftHandMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_LeftHandMOD/x_LeftHandMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_LeftShoulderMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_LeftShoulderMOD/x_LeftShoulderMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/x_LeftClavicleFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/x_LeftClavicleIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/x_LeftClavicleIK/x_LeftShoulderIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/Character_RightElbowAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/Character_RightShoulderAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightElbowMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightElbowMod/c_RightElbowMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightHandIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightHandIK/c_RightHandIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightIndex1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightIndex1/c_RightIndex1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightIndex2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightIndex2/c_RightIndex2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightMiddle1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightMiddle1/c_RightMiddle1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightMiddle2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightMiddle2/c_RightMiddle2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK/c_RightShoulderFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK/c_RightShoulderFK/GRP_c_RightElbowFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK/c_RightShoulderFK/GRP_c_RightElbowFK/c_RightElbowFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK/LeftArmEnd
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK/LeftArmStart
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK/RightArmEnd
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK/RightArmStart
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightThumb1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightThumb1/c_RightThumb1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightThumb2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightThumb2/c_RightThumb2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightThumb3
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightThumb3/c_RightThumb3
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_RightElbowMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_RightElbowMOD/x_RightElbowMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_RightHandMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_RightHandMOD/x_RightHandMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_RightShoulderMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_RightShoulderMOD/x_RightShoulderMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/x_RightClavicleFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/x_RightClavicleIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/x_RightClavicleIK/x_RightShoulderIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_c_Root
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_c_Root/c_Root
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eye_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eye_Left_1/c_eye_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eye_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eye_Right_1/c_eye_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_lwr_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_lwr_Left_1/c_eyelid_lwr_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_lwr_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_lwr_Right_1/c_eyelid_lwr_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_upr_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_upr_Left_1/c_eyelid_upr_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_upr_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_upr_Right_1/c_eyelid_upr_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_jaw_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_jaw_1/c_jaw_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_teeth_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_teeth_1/c_teeth_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_end
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_end/c_leaf_end
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_end_l
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_end_l/c_leaf_end_Left
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_end_r
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_end_r/c_leaf_end_Right
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_stem_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_stem_1/c_leaf_stem_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_stem_1/c_leaf_stem_1/GRP_leaf_stem_2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_stem_1/c_leaf_stem_1/GRP_leaf_stem_2/c_leaf_stem_2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_stem_1/c_leaf_stem_1/GRP_leaf_stem_2/c_leaf_stem_2/GRP_leaf_stem_3
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_stem_1/c_leaf_stem_1/GRP_leaf_stem_2/c_leaf_stem_2/GRP_leaf_stem_3/c_leaf_stem_3
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/Character_LeftHipAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/Character_LeftKneeAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_c_LeftKneeMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_c_LeftKneeMod/c_LeftKneeMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_LeftAnkleMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_LeftAnkleMOD/x_LeftAnkleMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_LeftHipMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_LeftHipMOD/x_LeftHipMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_LeftKneeMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_LeftKneeMOD/x_LeftKneeMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lFootIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lFootIK/c_LeftAnkleIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegFK/c_leftHipFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegFK/c_leftHipFK/c_leftKneeFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegFK/x_LeftHipFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegFK/x_LeftHipFK/x_LeftKneeFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegFK/x_LeftHipFK/x_LeftKneeFK/x_LeftAnkleFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegFK/x_LeftHipFK/x_LeftKneeFK/x_LeftAnkleFK/x_LeftToeBaseFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegIK/LeftLegEnd
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegIK/LeftLegStart
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegIK/x_LeftHipIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegIK/x_LeftHipIK/x_LeftKneeIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegIK/x_LeftHipIK/x_LeftKneeIK/x_LeftAnkleIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegIK/x_LeftHipIK/x_LeftKneeIK/x_LeftAnkleIK/x_LeftToeBaseIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/Character_RightHipAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/Character_RightKneeAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_c_RightKneeMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_c_RightKneeMod/c_RightKneeMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rFootIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rFootIK/c_RightAnkleIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_RightAnkleMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_RightAnkleMOD/x_RightAnkleMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_RightHipMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_RightHipMOD/x_RightHipMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_RightKneeMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_RightKneeMOD/x_RightKneeMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegFK/c_rightHipFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegFK/c_rightHipFK/c_rightKneeFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegFK/x_RightHipFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegFK/x_RightHipFK/x_RightKneeFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegFK/x_RightHipFK/x_RightKneeFK/x_RightAnkleFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegFK/x_RightHipFK/x_RightKneeFK/x_RightAnkleFK/x_RightToeBaseFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegIK/RightLegEnd
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegIK/RightLegStart
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegIK/x_RightHipIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegIK/x_RightHipIK/x_RightKneeIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegIK/x_RightHipIK/x_RightKneeIK/x_RightAnkleIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegIK/x_RightHipIK/x_RightKneeIK/x_RightAnkleIK/x_RightToeBaseIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_NeckControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_NeckControls/GRP_Neck
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_NeckControls/GRP_Neck/c_Neck1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_SpineControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_SpineControls/GRP_c_Spine1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_SpineControls/GRP_c_Spine1/c_Spine1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_SpineControls/GRP_c_SpineBase
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_SpineControls/GRP_c_SpineBase/c_SpineBase
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_SpineControls/GRP_c_SpineTop
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_SpineControls/GRP_c_SpineTop/c_SpineTop
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_leaf_root
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_leaf_root/b_leaf_end
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_leaf_root/b_leaf_end_l
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_leaf_root/b_leaf_end_r
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_leaf_root/b_leaf_stem_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_leaf_root/b_leaf_stem_1/b_leaf_stem_2
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_leaf_root/b_leaf_stem_1/b_leaf_stem_2/b_leaf_stem_3
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_LeftHip
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_LeftHip/b_LeftKnee
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_LeftHip/b_LeftKnee/b_LeftAnkle
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_LeftHip/b_LeftKnee/b_LeftAnkle/b_LeftToeBase
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_LeftHip/b_LeftKnee/b_LeftAnkle/b_LeftToeBase/b_LeftToeEnd
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_RightHip
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_RightHip/b_RightKnee
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_RightHip/b_RightKnee/b_RightAnkle
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_RightHip/b_RightKnee/b_RightAnkle/b_RightToeBase
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_RightHip/b_RightKnee/b_RightAnkle/b_RightToeBase/b_RightToeEnd
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftHandEnd
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftIndex1Base
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftIndex1Base/b_LeftIndex1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftIndex1Base/b_LeftIndex1/b_LeftIndex2
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftIndex1Base/b_LeftIndex1/b_LeftIndex2/b_LeftIndex3
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftIndex1Base/b_LeftIndex1/b_LeftIndex2/b_LeftIndex3/b_LeftIndex4
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftMiddle1Base
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftMiddle1Base/b_LeftMiddle1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftMiddle1Base/b_LeftMiddle1/b_LeftMiddle2
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftMiddle1Base/b_LeftMiddle1/b_LeftMiddle2/b_LeftMiddle3
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftMiddle1Base/b_LeftMiddle1/b_LeftMiddle2/b_LeftMiddle3/b_LeftMiddle4
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftThumb1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftThumb1/b_LeftThumb2
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftThumb1/b_LeftThumb2/b_LeftThumb3
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftThumb1/b_LeftThumb2/b_LeftThumb3/b_LeftThumb4
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_eye_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_eye_Right_l
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_eyelid_lwr_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_eyelid_lwr_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_eyelid_upr_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_eyelid_upr_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_HeadEnd
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_jaw_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_tooth_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightHandEnd
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightIndex1Base
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightIndex1Base/b_RightIndex1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightIndex1Base/b_RightIndex1/b_RightIndex2
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightIndex1Base/b_RightIndex1/b_RightIndex2/b_RightIndex3
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightIndex1Base/b_RightIndex1/b_RightIndex2/b_RightIndex3/b_RightIndex4
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightMiddle1Base
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightMiddle1Base/b_RightMiddle1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightMiddle1Base/b_RightMiddle1/b_RightMiddle2
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightMiddle1Base/b_RightMiddle1/b_RightMiddle2/b_RightMiddle3
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightMiddle1Base/b_RightMiddle1/b_RightMiddle2/b_RightMiddle3/b_RightMiddle4
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightThumb1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightThumb1/b_RightThumb2
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightThumb1/b_RightThumb2/b_RightThumb3
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightThumb1/b_RightThumb2/b_RightThumb3/b_RightThumb4
+        weight: 1
+      - path: teeth
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: fall_in
+      takeName: Take 001
+      firstFrame: 270
+      lastFrame: 280
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: capy_geo
+        weight: 1
+      - path: char_para_leaf
+        weight: 1
+      - path: eye_left
+        weight: 1
+      - path: eye_right
+        weight: 1
+      - path: GRP_Character
+        weight: 1
+      - path: GRP_Character/GRP_Controls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/Character_LeftElbowAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/Character_LeftShoulderAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftElbowMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftElbowMod/c_LeftElbowMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftHandIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftHandIK/c_LeftHandIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftIndex1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftIndex1/c_LeftIndex1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftIndex2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftIndex2/c_LeftIndex2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftMiddle1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftMiddle1/c_LeftMiddle1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftMiddle2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftMiddle2/c_LeftMiddle2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftShoulderFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftShoulderFK/c_LeftShoulderFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftShoulderFK/c_LeftShoulderFK/GRP_c_LeftElbowFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftShoulderFK/c_LeftShoulderFK/GRP_c_LeftElbowFK/c_LeftElbowFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftThumb1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftThumb1/c_LeftThumb1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftThumb2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftThumb2/c_LeftThumb2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftThumb3
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftThumb3/c_LeftThumb3
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_LeftElbowMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_LeftElbowMOD/x_LeftElbowMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_LeftHandMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_LeftHandMOD/x_LeftHandMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_LeftShoulderMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_LeftShoulderMOD/x_LeftShoulderMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/x_LeftClavicleFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/x_LeftClavicleIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/x_LeftClavicleIK/x_LeftShoulderIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/Character_RightElbowAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/Character_RightShoulderAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightElbowMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightElbowMod/c_RightElbowMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightHandIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightHandIK/c_RightHandIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightIndex1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightIndex1/c_RightIndex1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightIndex2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightIndex2/c_RightIndex2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightMiddle1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightMiddle1/c_RightMiddle1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightMiddle2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightMiddle2/c_RightMiddle2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK/c_RightShoulderFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK/c_RightShoulderFK/GRP_c_RightElbowFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK/c_RightShoulderFK/GRP_c_RightElbowFK/c_RightElbowFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK/LeftArmEnd
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK/LeftArmStart
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK/RightArmEnd
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK/RightArmStart
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightThumb1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightThumb1/c_RightThumb1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightThumb2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightThumb2/c_RightThumb2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightThumb3
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightThumb3/c_RightThumb3
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_RightElbowMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_RightElbowMOD/x_RightElbowMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_RightHandMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_RightHandMOD/x_RightHandMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_RightShoulderMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_RightShoulderMOD/x_RightShoulderMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/x_RightClavicleFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/x_RightClavicleIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/x_RightClavicleIK/x_RightShoulderIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_c_Root
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_c_Root/c_Root
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eye_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eye_Left_1/c_eye_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eye_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eye_Right_1/c_eye_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_lwr_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_lwr_Left_1/c_eyelid_lwr_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_lwr_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_lwr_Right_1/c_eyelid_lwr_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_upr_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_upr_Left_1/c_eyelid_upr_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_upr_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_upr_Right_1/c_eyelid_upr_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_jaw_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_jaw_1/c_jaw_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_teeth_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_teeth_1/c_teeth_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_end
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_end/c_leaf_end
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_end_l
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_end_l/c_leaf_end_Left
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_end_r
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_end_r/c_leaf_end_Right
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_stem_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_stem_1/c_leaf_stem_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_stem_1/c_leaf_stem_1/GRP_leaf_stem_2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_stem_1/c_leaf_stem_1/GRP_leaf_stem_2/c_leaf_stem_2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_stem_1/c_leaf_stem_1/GRP_leaf_stem_2/c_leaf_stem_2/GRP_leaf_stem_3
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_stem_1/c_leaf_stem_1/GRP_leaf_stem_2/c_leaf_stem_2/GRP_leaf_stem_3/c_leaf_stem_3
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/Character_LeftHipAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/Character_LeftKneeAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_c_LeftKneeMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_c_LeftKneeMod/c_LeftKneeMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_LeftAnkleMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_LeftAnkleMOD/x_LeftAnkleMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_LeftHipMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_LeftHipMOD/x_LeftHipMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_LeftKneeMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_LeftKneeMOD/x_LeftKneeMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lFootIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lFootIK/c_LeftAnkleIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegFK/c_leftHipFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegFK/c_leftHipFK/c_leftKneeFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegFK/x_LeftHipFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegFK/x_LeftHipFK/x_LeftKneeFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegFK/x_LeftHipFK/x_LeftKneeFK/x_LeftAnkleFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegFK/x_LeftHipFK/x_LeftKneeFK/x_LeftAnkleFK/x_LeftToeBaseFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegIK/LeftLegEnd
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegIK/LeftLegStart
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegIK/x_LeftHipIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegIK/x_LeftHipIK/x_LeftKneeIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegIK/x_LeftHipIK/x_LeftKneeIK/x_LeftAnkleIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegIK/x_LeftHipIK/x_LeftKneeIK/x_LeftAnkleIK/x_LeftToeBaseIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/Character_RightHipAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/Character_RightKneeAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_c_RightKneeMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_c_RightKneeMod/c_RightKneeMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rFootIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rFootIK/c_RightAnkleIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_RightAnkleMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_RightAnkleMOD/x_RightAnkleMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_RightHipMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_RightHipMOD/x_RightHipMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_RightKneeMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_RightKneeMOD/x_RightKneeMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegFK/c_rightHipFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegFK/c_rightHipFK/c_rightKneeFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegFK/x_RightHipFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegFK/x_RightHipFK/x_RightKneeFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegFK/x_RightHipFK/x_RightKneeFK/x_RightAnkleFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegFK/x_RightHipFK/x_RightKneeFK/x_RightAnkleFK/x_RightToeBaseFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegIK/RightLegEnd
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegIK/RightLegStart
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegIK/x_RightHipIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegIK/x_RightHipIK/x_RightKneeIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegIK/x_RightHipIK/x_RightKneeIK/x_RightAnkleIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegIK/x_RightHipIK/x_RightKneeIK/x_RightAnkleIK/x_RightToeBaseIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_NeckControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_NeckControls/GRP_Neck
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_NeckControls/GRP_Neck/c_Neck1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_SpineControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_SpineControls/GRP_c_Spine1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_SpineControls/GRP_c_Spine1/c_Spine1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_SpineControls/GRP_c_SpineBase
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_SpineControls/GRP_c_SpineBase/c_SpineBase
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_SpineControls/GRP_c_SpineTop
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_SpineControls/GRP_c_SpineTop/c_SpineTop
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_leaf_root
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_leaf_root/b_leaf_end
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_leaf_root/b_leaf_end_l
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_leaf_root/b_leaf_end_r
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_leaf_root/b_leaf_stem_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_leaf_root/b_leaf_stem_1/b_leaf_stem_2
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_leaf_root/b_leaf_stem_1/b_leaf_stem_2/b_leaf_stem_3
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_LeftHip
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_LeftHip/b_LeftKnee
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_LeftHip/b_LeftKnee/b_LeftAnkle
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_LeftHip/b_LeftKnee/b_LeftAnkle/b_LeftToeBase
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_LeftHip/b_LeftKnee/b_LeftAnkle/b_LeftToeBase/b_LeftToeEnd
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_RightHip
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_RightHip/b_RightKnee
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_RightHip/b_RightKnee/b_RightAnkle
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_RightHip/b_RightKnee/b_RightAnkle/b_RightToeBase
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_RightHip/b_RightKnee/b_RightAnkle/b_RightToeBase/b_RightToeEnd
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftHandEnd
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftIndex1Base
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftIndex1Base/b_LeftIndex1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftIndex1Base/b_LeftIndex1/b_LeftIndex2
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftIndex1Base/b_LeftIndex1/b_LeftIndex2/b_LeftIndex3
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftIndex1Base/b_LeftIndex1/b_LeftIndex2/b_LeftIndex3/b_LeftIndex4
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftMiddle1Base
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftMiddle1Base/b_LeftMiddle1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftMiddle1Base/b_LeftMiddle1/b_LeftMiddle2
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftMiddle1Base/b_LeftMiddle1/b_LeftMiddle2/b_LeftMiddle3
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftMiddle1Base/b_LeftMiddle1/b_LeftMiddle2/b_LeftMiddle3/b_LeftMiddle4
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftThumb1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftThumb1/b_LeftThumb2
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftThumb1/b_LeftThumb2/b_LeftThumb3
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftThumb1/b_LeftThumb2/b_LeftThumb3/b_LeftThumb4
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_eye_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_eye_Right_l
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_eyelid_lwr_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_eyelid_lwr_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_eyelid_upr_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_eyelid_upr_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_HeadEnd
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_jaw_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_tooth_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightHandEnd
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightIndex1Base
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightIndex1Base/b_RightIndex1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightIndex1Base/b_RightIndex1/b_RightIndex2
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightIndex1Base/b_RightIndex1/b_RightIndex2/b_RightIndex3
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightIndex1Base/b_RightIndex1/b_RightIndex2/b_RightIndex3/b_RightIndex4
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightMiddle1Base
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightMiddle1Base/b_RightMiddle1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightMiddle1Base/b_RightMiddle1/b_RightMiddle2
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightMiddle1Base/b_RightMiddle1/b_RightMiddle2/b_RightMiddle3
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightMiddle1Base/b_RightMiddle1/b_RightMiddle2/b_RightMiddle3/b_RightMiddle4
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightThumb1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightThumb1/b_RightThumb2
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightThumb1/b_RightThumb2/b_RightThumb3
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightThumb1/b_RightThumb2/b_RightThumb3/b_RightThumb4
+        weight: 1
+      - path: teeth
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: gnaw_right
+      takeName: Take 001
+      firstFrame: 410
+      lastFrame: 430
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: capy_geo
+        weight: 1
+      - path: char_para_leaf
+        weight: 1
+      - path: eye_left
+        weight: 1
+      - path: eye_right
+        weight: 1
+      - path: GRP_Character
+        weight: 1
+      - path: GRP_Character/GRP_Controls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/Character_LeftElbowAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/Character_LeftShoulderAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftElbowMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftElbowMod/c_LeftElbowMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftHandIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftHandIK/c_LeftHandIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftIndex1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftIndex1/c_LeftIndex1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftIndex2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftIndex2/c_LeftIndex2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftMiddle1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftMiddle1/c_LeftMiddle1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftMiddle2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftMiddle2/c_LeftMiddle2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftShoulderFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftShoulderFK/c_LeftShoulderFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftShoulderFK/c_LeftShoulderFK/GRP_c_LeftElbowFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftShoulderFK/c_LeftShoulderFK/GRP_c_LeftElbowFK/c_LeftElbowFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftThumb1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftThumb1/c_LeftThumb1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftThumb2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftThumb2/c_LeftThumb2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftThumb3
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_c_LeftThumb3/c_LeftThumb3
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_LeftElbowMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_LeftElbowMOD/x_LeftElbowMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_LeftHandMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_LeftHandMOD/x_LeftHandMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_LeftShoulderMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/GRP_LeftShoulderMOD/x_LeftShoulderMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/x_LeftClavicleFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/x_LeftClavicleIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_LeftArmControls/x_LeftClavicleIK/x_LeftShoulderIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/Character_RightElbowAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/Character_RightShoulderAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightElbowMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightElbowMod/c_RightElbowMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightHandIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightHandIK/c_RightHandIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightIndex1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightIndex1/c_RightIndex1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightIndex2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightIndex2/c_RightIndex2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightMiddle1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightMiddle1/c_RightMiddle1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightMiddle2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightMiddle2/c_RightMiddle2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK/c_RightShoulderFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK/c_RightShoulderFK/GRP_c_RightElbowFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK/c_RightShoulderFK/GRP_c_RightElbowFK/c_RightElbowFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK/LeftArmEnd
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK/LeftArmStart
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK/RightArmEnd
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightShoulderFK/RightArmStart
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightThumb1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightThumb1/c_RightThumb1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightThumb2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightThumb2/c_RightThumb2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightThumb3
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_c_RightThumb3/c_RightThumb3
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_RightElbowMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_RightElbowMOD/x_RightElbowMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_RightHandMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_RightHandMOD/x_RightHandMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_RightShoulderMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/GRP_RightShoulderMOD/x_RightShoulderMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/x_RightClavicleFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/x_RightClavicleIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_ArmControls/GRP_RightArmControls/x_RightClavicleIK/x_RightShoulderIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_c_Root
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_c_Root/c_Root
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eye_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eye_Left_1/c_eye_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eye_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eye_Right_1/c_eye_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_lwr_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_lwr_Left_1/c_eyelid_lwr_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_lwr_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_lwr_Right_1/c_eyelid_lwr_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_upr_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_upr_Left_1/c_eyelid_upr_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_upr_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_eyelid_upr_Right_1/c_eyelid_upr_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_jaw_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_jaw_1/c_jaw_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_teeth_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_HeadControls/GRP_Head/GRP_HeadOrient/c_Head/GRP_teeth_1/c_teeth_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_end
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_end/c_leaf_end
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_end_l
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_end_l/c_leaf_end_Left
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_end_r
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_end_r/c_leaf_end_Right
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_stem_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_stem_1/c_leaf_stem_1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_stem_1/c_leaf_stem_1/GRP_leaf_stem_2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_stem_1/c_leaf_stem_1/GRP_leaf_stem_2/c_leaf_stem_2
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_stem_1/c_leaf_stem_1/GRP_leaf_stem_2/c_leaf_stem_2/GRP_leaf_stem_3
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LeafControls/GRP_leaf_root/c_leaf_root/GRP_leaf_stem_1/c_leaf_stem_1/GRP_leaf_stem_2/c_leaf_stem_2/GRP_leaf_stem_3/c_leaf_stem_3
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/Character_LeftHipAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/Character_LeftKneeAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_c_LeftKneeMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_c_LeftKneeMod/c_LeftKneeMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_LeftAnkleMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_LeftAnkleMOD/x_LeftAnkleMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_LeftHipMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_LeftHipMOD/x_LeftHipMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_LeftKneeMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_LeftKneeMOD/x_LeftKneeMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lFootIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lFootIK/c_LeftAnkleIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegFK/c_leftHipFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegFK/c_leftHipFK/c_leftKneeFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegFK/x_LeftHipFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegFK/x_LeftHipFK/x_LeftKneeFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegFK/x_LeftHipFK/x_LeftKneeFK/x_LeftAnkleFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegFK/x_LeftHipFK/x_LeftKneeFK/x_LeftAnkleFK/x_LeftToeBaseFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegIK/LeftLegEnd
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegIK/LeftLegStart
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegIK/x_LeftHipIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegIK/x_LeftHipIK/x_LeftKneeIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegIK/x_LeftHipIK/x_LeftKneeIK/x_LeftAnkleIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_LeftLegControls/GRP_lLegIK/x_LeftHipIK/x_LeftKneeIK/x_LeftAnkleIK/x_LeftToeBaseIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/Character_RightHipAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/Character_RightKneeAim
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_c_RightKneeMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_c_RightKneeMod/c_RightKneeMod
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rFootIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rFootIK/c_RightAnkleIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_RightAnkleMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_RightAnkleMOD/x_RightAnkleMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_RightHipMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_RightHipMOD/x_RightHipMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_RightKneeMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_RightKneeMOD/x_RightKneeMOD
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegFK/c_rightHipFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegFK/c_rightHipFK/c_rightKneeFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegFK/x_RightHipFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegFK/x_RightHipFK/x_RightKneeFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegFK/x_RightHipFK/x_RightKneeFK/x_RightAnkleFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegFK/x_RightHipFK/x_RightKneeFK/x_RightAnkleFK/x_RightToeBaseFK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegIK/RightLegEnd
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegIK/RightLegStart
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegIK/x_RightHipIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegIK/x_RightHipIK/x_RightKneeIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegIK/x_RightHipIK/x_RightKneeIK/x_RightAnkleIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_LegControls/GRP_RightLegControls/GRP_rLegIK/x_RightHipIK/x_RightKneeIK/x_RightAnkleIK/x_RightToeBaseIK
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_NeckControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_NeckControls/GRP_Neck
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_NeckControls/GRP_Neck/c_Neck1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_SpineControls
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_SpineControls/GRP_c_Spine1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_SpineControls/GRP_c_Spine1/c_Spine1
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_SpineControls/GRP_c_SpineBase
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_SpineControls/GRP_c_SpineBase/c_SpineBase
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_SpineControls/GRP_c_SpineTop
+        weight: 1
+      - path: GRP_Character/GRP_Controls/GRP_SpineControls/GRP_c_SpineTop/c_SpineTop
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_leaf_root
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_leaf_root/b_leaf_end
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_leaf_root/b_leaf_end_l
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_leaf_root/b_leaf_end_r
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_leaf_root/b_leaf_stem_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_leaf_root/b_leaf_stem_1/b_leaf_stem_2
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_leaf_root/b_leaf_stem_1/b_leaf_stem_2/b_leaf_stem_3
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_LeftHip
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_LeftHip/b_LeftKnee
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_LeftHip/b_LeftKnee/b_LeftAnkle
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_LeftHip/b_LeftKnee/b_LeftAnkle/b_LeftToeBase
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_LeftHip/b_LeftKnee/b_LeftAnkle/b_LeftToeBase/b_LeftToeEnd
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_RightHip
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_RightHip/b_RightKnee
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_RightHip/b_RightKnee/b_RightAnkle
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_RightHip/b_RightKnee/b_RightAnkle/b_RightToeBase
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_RightHip/b_RightKnee/b_RightAnkle/b_RightToeBase/b_RightToeEnd
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftHandEnd
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftIndex1Base
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftIndex1Base/b_LeftIndex1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftIndex1Base/b_LeftIndex1/b_LeftIndex2
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftIndex1Base/b_LeftIndex1/b_LeftIndex2/b_LeftIndex3
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftIndex1Base/b_LeftIndex1/b_LeftIndex2/b_LeftIndex3/b_LeftIndex4
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftMiddle1Base
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftMiddle1Base/b_LeftMiddle1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftMiddle1Base/b_LeftMiddle1/b_LeftMiddle2
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftMiddle1Base/b_LeftMiddle1/b_LeftMiddle2/b_LeftMiddle3
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftMiddle1Base/b_LeftMiddle1/b_LeftMiddle2/b_LeftMiddle3/b_LeftMiddle4
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftThumb1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftThumb1/b_LeftThumb2
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftThumb1/b_LeftThumb2/b_LeftThumb3
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_LeftClavicle/b_LeftShoulder/b_LeftElbow/b_LeftHand/b_LeftThumb1/b_LeftThumb2/b_LeftThumb3/b_LeftThumb4
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_eye_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_eye_Right_l
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_eyelid_lwr_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_eyelid_lwr_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_eyelid_upr_Left_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_eyelid_upr_Right_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_HeadEnd
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_jaw_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_Neck1/b_Head/b_tooth_1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightHandEnd
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightIndex1Base
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightIndex1Base/b_RightIndex1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightIndex1Base/b_RightIndex1/b_RightIndex2
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightIndex1Base/b_RightIndex1/b_RightIndex2/b_RightIndex3
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightIndex1Base/b_RightIndex1/b_RightIndex2/b_RightIndex3/b_RightIndex4
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightMiddle1Base
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightMiddle1Base/b_RightMiddle1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightMiddle1Base/b_RightMiddle1/b_RightMiddle2
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightMiddle1Base/b_RightMiddle1/b_RightMiddle2/b_RightMiddle3
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightMiddle1Base/b_RightMiddle1/b_RightMiddle2/b_RightMiddle3/b_RightMiddle4
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightThumb1
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightThumb1/b_RightThumb2
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightThumb1/b_RightThumb2/b_RightThumb3
+        weight: 1
+      - path: GRP_Character/GRP_Skeleton/b_World/b_Root/b_SpineBase/b_Spine1/b_SpineTop/b_RightClavicle/b_RightShoulder/b_RightElbow/b_RightHand/b_RightThumb1/b_RightThumb2/b_RightThumb3/b_RightThumb4
+        weight: 1
+      - path: teeth
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: gnaw_left
+      takeName: Take 001
+      firstFrame: 440
+      lastFrame: 460
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

@@ -14,6 +14,8 @@ public class abilityHandler : MonoBehaviour
     public int NumStoppers = 0;
     public float TimeLimit = 30.0f;
     public GameObject HolePrefab;
+    public GameObject AbilityParticle;
+
     [HideInInspector]
     public Vector3 HoleOffset = new Vector3(0, 0.145f, 0);
 
@@ -74,11 +76,11 @@ public class abilityHandler : MonoBehaviour
 
         UICounter.GetComponent<uiScore>().startTimer(TimeLimit);
     }
-	
-	void Update ()
+
+    private void SpawnParticleEffect(agent SelectedAgent)
     {
-	    
-	}
+        GameObject ParticleClone = Instantiate(AbilityParticle, SelectedAgent.transform.position, Quaternion.identity) as GameObject;
+    }
 
     public void SetAgentAbility(agent SelectedAgent)
     {
@@ -94,6 +96,8 @@ public class abilityHandler : MonoBehaviour
 
             NumDiggers -= 1;
             DiggerCountText.text = "" + NumDiggers;
+
+            SpawnParticleEffect(SelectedAgent);
         }
 
         if (CurrentAbility == Abilities.Stopper && !SelectedAgent.Falling && SelectedAgent.FallSpeed < 0.01)
@@ -103,6 +107,8 @@ public class abilityHandler : MonoBehaviour
                 NumStoppers -= 1;
                 StopperCountText.text = "" + NumStoppers;
                 SelectedAgent.ToggleStopper();
+
+                SpawnParticleEffect(SelectedAgent);
             }
             else if (SelectedAgent.Ability == Abilities.Stopper)
             {
@@ -116,6 +122,7 @@ public class abilityHandler : MonoBehaviour
             {
                 NumGnawers -= 1;
                 GnawerCountText.text = "" + NumGnawers;
+                SpawnParticleEffect(SelectedAgent);
             }
             SelectedAgent.ToggleGnawer();
         }
@@ -127,6 +134,7 @@ public class abilityHandler : MonoBehaviour
                 NumFloaters -= 1;
                 FloaterCountText.text = "" + NumFloaters;
                 SelectedAgent.ToggleFloater();
+                SpawnParticleEffect(SelectedAgent);
             }
         }
     }
@@ -145,7 +153,7 @@ public class abilityHandler : MonoBehaviour
         StopperCountText.text = "" + NumStoppers;
     }
 
-    /** Sets an agents ability. */
+    /** Sets the current ability that will get applied to the next selected agent. */
     public void SetAbility (string Ability)
     {
         switch (Ability)

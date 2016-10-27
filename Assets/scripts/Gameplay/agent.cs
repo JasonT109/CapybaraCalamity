@@ -82,6 +82,8 @@ public class agent : MonoBehaviour
     {
         FallSpeed = -RB.velocity.y;
 
+        AgentAnim.SetFloat("Fall_Speed", FallSpeed);
+
         if (FallSpeed < FallTolerance)
         {
             if (Falling)
@@ -124,7 +126,7 @@ public class agent : MonoBehaviour
             AgentAnim.Play("run_right", -1, 0.0f);
 
         if (Falling)
-            AgentAnim.Play("fall", -1, 0.0f);
+            AgentAnim.Play("fall_in", -1, 0.0f);
     }
 
     /** Falling at fast speed. */
@@ -132,8 +134,8 @@ public class agent : MonoBehaviour
     {
         FallingFast = !FallingFast;
 
-        if (FallingFast)
-            AgentAnim.Play("fall_fast", -1, 0.0f);
+        //if (FallingFast)
+            //AgentAnim.Play("fall_fast", -1, 0.0f);
     }
 
     /** Toggle the stopper ability. */
@@ -158,6 +160,7 @@ public class agent : MonoBehaviour
         }
     }
 
+    /** Toggle the gnawer ability. */
     public void ToggleGnawer()
     {
         if (Ability != abilityHandler.Abilities.Gnawer)
@@ -166,6 +169,7 @@ public class agent : MonoBehaviour
             Ability = abilityHandler.Abilities.None;
     }
 
+    /** Toggle the floater ability. */
     public void ToggleFloater()
     {
         if (Ability == abilityHandler.Abilities.Stopper)
@@ -243,11 +247,15 @@ public class agent : MonoBehaviour
             {
                 float tunnelOffset = 0.125f;
                 float tunnelRotation = 0;
+                string animParam = "Gnaw_Right";
                 if (MoveDir.x == -1)
                 {
                     tunnelOffset = -0.125f;
                     tunnelRotation = 180;
+                    animParam = "Gnaw_Left";
                 }
+
+                AgentAnim.SetBool(animParam, true);
 
                 //let's make a tunnel
                 GameObject tunnelClone = Instantiate(Tunnel, transform.position + new Vector3(tunnelOffset, -0.16f, 0), Quaternion.identity) as GameObject;
@@ -260,6 +268,8 @@ public class agent : MonoBehaviour
                 MoveDir.x *= 0.2f;
                 StartCoroutine(RestoreMoveSpeed(2.0f));
                 Ability = abilityHandler.Abilities.None;
+
+
             }
         }
         else
@@ -274,10 +284,12 @@ public class agent : MonoBehaviour
         if (MoveDir.x > 0)
         {
             MoveDir.x = 1;
+            AgentAnim.SetBool("Gnaw_Right", false);
         }
         else
         {
             MoveDir.x = -1;
+            AgentAnim.SetBool("Gnaw_Left", false);
         }
     }
 
