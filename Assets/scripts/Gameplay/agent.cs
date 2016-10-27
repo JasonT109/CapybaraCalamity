@@ -133,9 +133,6 @@ public class agent : MonoBehaviour
     void ToggleFallingFast()
     {
         FallingFast = !FallingFast;
-
-        //if (FallingFast)
-            //AgentAnim.Play("fall_fast", -1, 0.0f);
     }
 
     /** Toggle the stopper ability. */

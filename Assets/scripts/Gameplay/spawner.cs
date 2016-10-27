@@ -80,7 +80,7 @@ public class spawner : MonoBehaviour
 
         Rigidbody rb;
         rb = newAgent.GetComponent<Rigidbody>();
-        rb.velocity = new Vector3(0, -1, 0);
+        rb.velocity = new Vector3(0, -1.51f, 0);
 
         _CanSpawn = true;
         numberOfAgents -= 1;
