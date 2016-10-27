@@ -17,7 +17,7 @@ public class uiScore : MonoBehaviour {
     private float minutes;
     private float seconds;
     public bool levelComplete = false;
-
+    private string fmt = "00.##";
     public void startTimer(float t)
     {
         timeRemaining = t;
@@ -51,14 +51,12 @@ public class uiScore : MonoBehaviour {
 
         timeRemaining -= Time.deltaTime;
 
-        scoreText.text = (percentageSaved + " / 100%");
+        scoreText.text = (percentageSaved.ToString("n0") + " / 100%");
         if (timeRemaining >= 0.0f && !levelComplete)
         {
             minutes = Mathf.Floor(timeRemaining / 60);
             seconds = ((timeRemaining / 60) - minutes) * 60;
-
-            //120 = 2 minutes
-            timeLeft.text = (minutes + ":" + Mathf.Round(seconds));
+            timeLeft.text = (minutes.ToString(fmt) + ":" + Mathf.Round(seconds).ToString(fmt));
         }
         
         if (totalNumSaved + totalNumLost == totalNumAgents && !levelComplete)
