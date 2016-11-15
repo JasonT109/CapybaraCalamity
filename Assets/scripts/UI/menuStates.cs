@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System.Collections.Generic;
 
 public class menuStates : MonoBehaviour {
 
@@ -18,7 +19,17 @@ public class menuStates : MonoBehaviour {
     public GameObject nextButton;
     public GameObject resetButton2;
     public GameObject homeButton2;
+    public GameObject PickupObject;
     private bool resultsScreen = false;
+
+    public struct Pickup
+    {
+        public Vector3 PickupPosition;
+        public abilityHandler.Abilities PickupAbility;
+        public int PickupCount;
+    }
+
+    private List<Pickup> Pickups = new List<Pickup>();
 
     void Start()
     {
@@ -29,6 +40,38 @@ public class menuStates : MonoBehaviour {
         nextButton.SetActive(false);
         resetButton2.SetActive(false);
         homeButton2.SetActive(false);
+
+        GetPickups();
+    }
+
+    private void GetPickups()
+    {
+        GameObject[] AllPickups = GameObject.FindGameObjectsWithTag("pickup");
+        foreach (GameObject p in AllPickups)
+        {
+            var _PickupScript = p.GetComponent<AbilityPickup>();
+            Pickup _NewPickup = new Pickup();
+            _NewPickup.PickupPosition = p.transform.position;
+            _NewPickup.PickupAbility = _PickupScript.Ability;
+            _NewPickup.PickupCount = _PickupScript.Count;
+
+            Pickups.Add(_NewPickup);
+        }
+    }
+
+    private void RespawnPickups()
+    {
+        GameObject[] AllPickups = GameObject.FindGameObjectsWithTag("pickup");
+        foreach (GameObject p in AllPickups)
+            Destroy(p);
+
+        foreach (Pickup p in Pickups)
+        {
+            GameObject PickupClone = Instantiate(PickupObject, p.PickupPosition, Quaternion.identity) as GameObject;
+            var PickupCloneScript = PickupClone.GetComponent<AbilityPickup>();
+            PickupCloneScript.Ability = p.PickupAbility;
+            PickupCloneScript.Count = p.PickupCount;
+        }
     }
 
     public void pauseGame()
@@ -71,6 +114,15 @@ public class menuStates : MonoBehaviour {
             Destroy(h);
         }
 
+        GameObject[] steps = GameObject.FindGameObjectsWithTag("step");
+        foreach (GameObject s in steps)
+        {
+            Destroy(s);
+        }
+
+        //reset pickups
+        RespawnPickups();
+
         //reset abilities count
         var abilityScript = abilityHandler.GetComponent<abilityHandler>();
         abilityScript.ResetUICount();
@@ -105,6 +157,7 @@ public class menuStates : MonoBehaviour {
             nextButton.SetActive(false);
             resetButton2.SetActive(false);
             homeButton2.SetActive(false);
+            pauseButton.SetActive(true);
         }
     }
 

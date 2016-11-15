@@ -8,9 +8,11 @@ public class uiAbilityCounter : MonoBehaviour
     public GameObject GnawerCountText;
     public GameObject FloaterCountText;
     public GameObject StopperCountText;
+    public GameObject BuilderCountText;
 
     public Toggle DiggerToggle;
     public Toggle GnawerToggle;
     public Toggle FloaterToggle;
     public Toggle StopperToggle;
+    public Toggle BuilderToggle;
 }

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using TouchScript.Gestures;
 using TouchScript.Hit;
 
@@ -17,6 +18,13 @@ public class agent : MonoBehaviour
     public bool FallingSlow = false;
     public bool Digging = false;
     public bool CanDig = false;
+    public Vector3 TunnelOffset = new Vector3(0.125f, 0, 0);
+    public Vector3 StepOffsetDistance = new Vector3(0.2f, 1.4f, 0);
+    public Vector3 StepInitialOffset = new Vector3(0.8f, -0.133f, 0);
+    public float StepAssistImpulse = 0.1f;
+    public float StepDistanceCheck = 0.8f;
+    public float BuilderMoveSpeed = 0.8f;
+    public float BuilderPauseTime = 0.2f;
 
     [Header("Ability configuration:")]
     public abilityHandler.Abilities Ability;
@@ -27,10 +35,14 @@ public class agent : MonoBehaviour
     public Collider CL;
     public Collider CurrentCollider;
     public Collider IgnoredCollider;
+    public List<Collider> IgnoredColliders = new List<Collider>();
+    public float MinStepHeight = 0.12f;
+    public float RayDistance = 0.35f;
     private bool _CollisionTimingCheck = false;
 
     [Header ("Prefab configuration:")]
     public GameObject Tunnel;
+    public GameObject Step;
     public Animator AgentAnim;
 
     [HideInInspector]
@@ -39,6 +51,8 @@ public class agent : MonoBehaviour
 
     private GameObject UIScore;
     private PressGesture _PressGesture;
+    [HideInInspector]
+    public bool _BuildingStep;
 
     private void OnEnable()
     {
@@ -60,6 +74,7 @@ public class agent : MonoBehaviour
         if (hit.Transform.gameObject == gameObject)
             _AbilityHandler.SetAgentAbility(this);
     }
+
     void Start()
     {
         RB = GetComponent<Rigidbody>();
@@ -80,6 +95,12 @@ public class agent : MonoBehaviour
 	
 	void FixedUpdate ()
     {
+        if (Ability == abilityHandler.Abilities.Builder)
+            Debug.DrawRay(transform.position, MoveDir * StepDistanceCheck, Color.red);
+
+        foreach (Collider c in IgnoredColliders)
+            Physics.IgnoreCollision(CL, c);
+
         FallSpeed = -RB.velocity.y;
 
         AgentAnim.SetFloat("Fall_Speed", FallSpeed);
@@ -105,6 +126,72 @@ public class agent : MonoBehaviour
             if (!FallingSlow)
                 ToggleFallingSlow();
         }
+
+        if (Ability == abilityHandler.Abilities.Builder && !_BuildingStep)
+        {
+            if (ValidStepPosition())
+            {
+                MakeStep();
+            }
+        }
+    }
+
+    /** Make a step at the agents current position and orientation. */
+    public void MakeStep()
+    {
+        if (MoveDir.x > 0)
+            MoveDir.x = BuilderMoveSpeed;
+        else
+            MoveDir.x = -BuilderMoveSpeed;
+
+        StartCoroutine(RestoreMoveSpeed(BuilderPauseTime));
+        _BuildingStep = true;
+        float StepRotation = 0f;
+        Vector3 StepOffset = transform.position + StepInitialOffset;
+
+        if (CurrentCollider.tag == "step")
+            StepOffset = CurrentCollider.transform.position + new Vector3(StepOffsetDistance.x, StepOffsetDistance.y, StepOffsetDistance.z);
+
+        if (MoveDir.x < 0)
+        {
+            StepRotation = 180f;
+
+            if (CurrentCollider.tag == "branch")
+                StepOffset = transform.position + new Vector3(-StepInitialOffset.x, StepInitialOffset.y, StepInitialOffset.z);
+
+            if (CurrentCollider.tag == "step")
+                StepOffset = CurrentCollider.transform.position + new Vector3(-StepOffsetDistance.x, StepOffsetDistance.y, StepOffsetDistance.z);
+        }
+
+        GameObject StepClone = Instantiate(Step, StepOffset, Quaternion.identity) as GameObject;
+        StepClone.transform.rotation = Quaternion.AngleAxis(StepRotation, Vector3.up);
+    }
+
+    /** Check that we can build a step here. */
+    public bool ValidStepPosition()
+    {
+        bool IsValid = false;
+
+        //check we are standing on a branch and not falling
+        if (CurrentCollider.tag == "branch" || CurrentCollider.tag == "step")
+        {
+            //check we have enough distance in front of us
+            RaycastHit hit;
+
+            string[] Layers = { "trunk", "stopper", "branch" };
+
+            if (!Physics.Raycast(transform.position, MoveDir, out hit, StepDistanceCheck, LayerMask.GetMask(Layers)))
+            {
+                if (!Physics.Raycast(transform.position + (new Vector3 (StepDistanceCheck, 0, 0) * MoveDir.x), new Vector3(0, 1, 0), out hit, 0.75f, LayerMask.GetMask(Layers)))
+                    IsValid = true;
+                else
+                    ToggleBuilder(false);
+            }
+            else
+                ToggleBuilder(false);
+        }
+
+        return IsValid;
     }
 
     /** Falling slowly under parachute. */
@@ -157,6 +244,15 @@ public class agent : MonoBehaviour
         }
     }
 
+    /** Toggle the builder ability. */
+    public void ToggleBuilder(bool ToggleOn)
+    {
+        if (Ability != abilityHandler.Abilities.Builder && ToggleOn)
+            Ability = abilityHandler.Abilities.Builder;
+        else
+            Ability = abilityHandler.Abilities.None;
+    }
+
     /** Toggle the gnawer ability. */
     public void ToggleGnawer()
     {
@@ -185,51 +281,60 @@ public class agent : MonoBehaviour
 
     void OnCollisionEnter(Collision collisionInfo)
     {
-        if (collisionInfo.collider.tag == "branch")
+        if (collisionInfo.collider.tag == "branch" || collisionInfo.collider.tag == "step")
         {
             CurrentCollider = collisionInfo.collider;
-            CanDig = true;
+            CheckImpactSpeed();
 
-            //fell too hard
-            if (FallSpeed > SplatSpeed)
-            {
-                var uiScript = UIScore.GetComponent<uiScore>();
-                uiScript.addLostUnit();
-
-                Destroy(gameObject);
-            }
-            
+            if (collisionInfo.collider.tag == "branch")
+                CanDig = true;
+            else
+                CanDig = false;
         }
-        else if (collisionInfo.collider.tag == "trunk" || collisionInfo.collider.tag == "agent")
+        else
+            CanDig = false;
+
+        if (collisionInfo.collider.tag == "trunk" || collisionInfo.collider.tag == "branch" || collisionInfo.collider.tag == "agent" )
         {
+            if (Ability == abilityHandler.Abilities.Gnawer && collisionInfo.collider.tag == "trunk")
+                MakeTunnel(collisionInfo.collider);
+
             if (collisionInfo.collider.tag == "agent")
-            {
-                //Check that we are not inside the other agent, if so move us back
-                Vector3 pos1 = transform.position;
-                Vector3 pos2 = collisionInfo.collider.transform.position;
-                if (Vector3.Distance(pos1, pos2) < 0.29f)
-                {
-                    if (pos1.x < pos2.x && Ability != abilityHandler.Abilities.Stopper)
-                    {
-                        transform.position = new Vector3(transform.position.x - 0.01f,
-                                              transform.position.y,
-                                              transform.position.z);
-                        MoveDir.x = -1;
-                        AgentAnim.Play("run_left", -1, 0.0f);
-                    }
-                    else if (pos1.x > pos2.x && Ability != abilityHandler.Abilities.Stopper)
-                    {
-                        transform.position = new Vector3(transform.position.x + 0.01f,
-                                              transform.position.y,
-                                              transform.position.z);
-                        MoveDir.x = 1;
-                        AgentAnim.Play("run_right", -1, 0.0f);
-                    }
-                }
-            }
+                CheckAgentToAgentCollision(collisionInfo.collider);
             else if (Ability != abilityHandler.Abilities.Gnawer && !Falling)
+                CheckAgentToEnviroCollision(collisionInfo);
+        }
+    }
+
+    /** Check impact speed, are we going to survive? */
+    private void CheckImpactSpeed()
+    {
+        if (FallSpeed > SplatSpeed)
+        {
+            var uiScript = UIScore.GetComponent<uiScore>();
+            uiScript.addLostUnit();
+            Destroy(gameObject);
+        }
+    }
+
+    /** Check height of thing we have hit, can we step over it? */
+    private void CheckAgentToEnviroCollision(Collision CollisionInfo)
+    {
+        if (CollisionInfo.collider.tag != "step")
+        {
+            Ray ray = new Ray(new Vector3(transform.position.x, transform.position.y + MinStepHeight, transform.position.z), MoveDir);
+
+            Debug.DrawRay(ray.origin, ray.direction, Color.blue, 5f, false);
+
+            RaycastHit hit;
+
+            string[] Layers = { "trunk", "stopper", "branch" };
+
+            if (Physics.Raycast(ray.origin, ray.direction, out hit, RayDistance, LayerMask.GetMask(Layers)))
             {
-                if (MoveDir.x == 1)
+                Debug.Log("Hit an obstacle: " + hit.transform.name);
+
+                if (MoveDir.x > 0)
                 {
                     MoveDir.x = -1;
                     AgentAnim.Play("run_left", -1, 0.0f);
@@ -240,53 +345,76 @@ public class agent : MonoBehaviour
                     AgentAnim.Play("run_right", -1, 0.0f);
                 }
             }
-            if (Ability == abilityHandler.Abilities.Gnawer && collisionInfo.collider.tag == "trunk")
+            else
+                RB.AddForce(Vector3.up * StepAssistImpulse, ForceMode.Impulse);
+        }
+    }
+
+    /** Check we aren't inside another agent if it is a stopper, set move direction */
+    private void CheckAgentToAgentCollision(Collider _Collider)
+    {
+        Vector3 pos1 = transform.position;
+        Vector3 pos2 = _Collider.transform.position;
+        if (Vector3.Distance(new Vector3(pos1.x, 0, 0), new Vector3(pos2.x, 0, 0)) < 0.29f)
+        {
+            if (pos1.x < pos2.x && Ability != abilityHandler.Abilities.Stopper)
             {
-                float tunnelOffset = 0.125f;
-                float tunnelRotation = 0;
-                string animParam = "Gnaw_Right";
-                if (MoveDir.x == -1)
-                {
-                    tunnelOffset = -0.125f;
-                    tunnelRotation = 180;
-                    animParam = "Gnaw_Left";
-                }
-
-                AgentAnim.SetBool(animParam, true);
-
-                //let's make a tunnel
-                GameObject tunnelClone = Instantiate(Tunnel, transform.position + new Vector3(tunnelOffset, -0.16f, 0), Quaternion.identity) as GameObject;
-                tunnelClone.transform.rotation = Quaternion.AngleAxis(tunnelRotation, Vector3.up);
-                
-                //ignore the collision so we can travel through it
-                IgnoredCollider = collisionInfo.collider;
-                Physics.IgnoreCollision(CL, IgnoredCollider);
-
-                MoveDir.x *= 0.2f;
-                StartCoroutine(RestoreMoveSpeed(2.0f));
-                Ability = abilityHandler.Abilities.None;
-
-
+                transform.position = new Vector3(transform.position.x - 0.01f,
+                                      transform.position.y,
+                                      transform.position.z);
+                MoveDir.x = -1;
+                AgentAnim.Play("run_left", -1, 0.0f);
+            }
+            else if (pos1.x > pos2.x && Ability != abilityHandler.Abilities.Stopper)
+            {
+                transform.position = new Vector3(transform.position.x + 0.01f,
+                                      transform.position.y,
+                                      transform.position.z);
+                MoveDir.x = 1;
+                AgentAnim.Play("run_right", -1, 0.0f);
             }
         }
-        else
+    }
+
+    /** Instantiates a tunnel object and ingores the given collider the agent can pass through. */
+    private void MakeTunnel(Collider _Collider)
+    {
+        float TunnelXOffset = TunnelOffset.x;
+        float TunnelRotation = 0;
+        string GnawAnimation = "Gnaw_Right";
+        if (MoveDir.x == -1)
         {
-            CanDig = false;
+            TunnelXOffset = -TunnelOffset.x;
+            TunnelRotation = 180;
+            GnawAnimation = "Gnaw_Left";
         }
+
+        AgentAnim.SetBool(GnawAnimation, true);
+
+        GameObject TunnelClone = Instantiate(Tunnel, transform.position + new Vector3(TunnelXOffset, TunnelOffset.y, TunnelOffset.z), Quaternion.identity) as GameObject;
+        TunnelClone.transform.rotation = Quaternion.AngleAxis(TunnelRotation, Vector3.up);
+
+        IgnoredCollider = _Collider;
+        Physics.IgnoreCollision(CL, IgnoredCollider);
+
+        MoveDir.x *= 0.2f;
+        StartCoroutine(RestoreMoveSpeed(2.0f));
     }
 
     IEnumerator RestoreMoveSpeed(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
+
         if (MoveDir.x > 0)
-        {
             MoveDir.x = 1;
-            AgentAnim.SetBool("Gnaw_Right", false);
-        }
         else
-        {
             MoveDir.x = -1;
+
+        if (Ability == abilityHandler.Abilities.Gnawer)
+        {
+            Ability = abilityHandler.Abilities.None;
             AgentAnim.SetBool("Gnaw_Left", false);
+            AgentAnim.SetBool("Gnaw_Right", false);
         }
     }
 
@@ -294,7 +422,6 @@ public class agent : MonoBehaviour
     {
         if (trigger.tag == "hole")
         {
-            //if that collider is a branch turn off collision with it
             if (CurrentCollider != null)
             {
                 if (CurrentCollider.tag == "branch")
@@ -318,6 +445,7 @@ public class agent : MonoBehaviour
                 }
             }
         }
+
         if (trigger.tag == "exit")
         {
             var uiScript = UIScore.GetComponent<uiScore>();
@@ -325,6 +453,7 @@ public class agent : MonoBehaviour
 
             Destroy(gameObject);
         }
+
         if (trigger.tag == "killplane")
         {
             var uiScript = UIScore.GetComponent<uiScore>();
@@ -332,10 +461,12 @@ public class agent : MonoBehaviour
 
             Destroy(gameObject);
         }
+
         if (trigger.tag == "tunnel")
         {
-            //cast a ray in current direction to find the trunk we want to travel through
-            Ray ray = new Ray(transform.position, new Vector3(1.25f * MoveDir.x, 0, 0));
+            Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 0.125f, transform.position.z), MoveDir, Color.red, 0.5f);
+
+            Ray ray = new Ray(new Vector3(transform.position.x, transform.position.y + 0.125f, transform.position.z), MoveDir);
             int layerMask = 1 << 9;
 
             RaycastHit hit;
@@ -349,6 +480,14 @@ public class agent : MonoBehaviour
                     StartCoroutine(TimingCheck(0.05F));
                 }
             }
+        }
+
+        if (trigger.tag == "pickup")
+        {
+            var Pickup = trigger.GetComponent<AbilityPickup>();
+            _AbilityHandler.AddAbility(Pickup.Ability, Pickup.Count);
+            Pickup.SpawnParticleEffect();
+            Destroy(trigger.gameObject);
         }
     }
 

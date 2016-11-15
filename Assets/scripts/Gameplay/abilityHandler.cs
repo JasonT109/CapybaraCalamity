@@ -12,6 +12,7 @@ public class abilityHandler : MonoBehaviour
     public int NumGnawers = 0;
     public int NumFloaters = 0;
     public int NumStoppers = 0;
+    public int NumBuilders = 0;
     public float TimeLimit = 30.0f;
     public GameObject HolePrefab;
     public GameObject AbilityParticle;
@@ -25,7 +26,8 @@ public class abilityHandler : MonoBehaviour
         Digger,
         Gnawer,
         Floater,
-        Stopper
+        Stopper,
+        Builder
     }
 
     public Abilities CurrentAbility = new Abilities();
@@ -35,6 +37,7 @@ public class abilityHandler : MonoBehaviour
     private Text GnawerCountText;
     private Text FloaterCountText;
     private Text StopperCountText;
+    private Text BuilderCountText;
 
     [HideInInspector]
     public int _InitDiggerCount;
@@ -44,6 +47,8 @@ public class abilityHandler : MonoBehaviour
     public int _InitFloaterCount;
     [HideInInspector]
     public int _InitStopperCount;
+    [HideInInspector]
+    public int _InitBuilderCount;
 
     void Start ()
     {
@@ -51,6 +56,7 @@ public class abilityHandler : MonoBehaviour
         _InitGnawerCount = NumGnawers;
         _InitFloaterCount = NumFloaters;
         _InitStopperCount = NumStoppers;
+        _InitBuilderCount = NumBuilders;
 
         UICounter = GameObject.FindGameObjectWithTag("UI");
         var UICounterScript = UICounter.GetComponent<uiAbilityCounter>();
@@ -59,11 +65,13 @@ public class abilityHandler : MonoBehaviour
         GnawerCountText = UICounterScript.GnawerCountText.GetComponent<Text>();
         FloaterCountText = UICounterScript.FloaterCountText.GetComponent<Text>();
         StopperCountText = UICounterScript.StopperCountText.GetComponent<Text>();
+        BuilderCountText = UICounterScript.BuilderCountText.GetComponent<Text>();
 
         DiggerCountText.text = "" + NumDiggers;
         GnawerCountText.text = "" + NumGnawers;
         FloaterCountText.text = "" + NumFloaters;
         StopperCountText.text = "" + NumStoppers;
+        BuilderCountText.text = "" + NumBuilders;
 
         if (NumDiggers == 0)
             UICounterScript.DiggerToggle.interactable = false;
@@ -73,15 +81,49 @@ public class abilityHandler : MonoBehaviour
             UICounterScript.GnawerToggle.interactable = false;
         if (NumStoppers == 0)
             UICounterScript.StopperToggle.interactable = false;
+        if (NumBuilders == 0)
+            UICounterScript.BuilderToggle.interactable = false;
 
         UICounter.GetComponent<uiScore>().startTimer(TimeLimit);
     }
 
+    /** Add an ability dynamically. */
+    public void AddAbility(Abilities Ability, int AbilityCount)
+    {
+        if (Ability == Abilities.Builder)
+        {
+            NumBuilders += AbilityCount;
+            BuilderCountText.text = "" + NumBuilders;
+        }
+        if (Ability == Abilities.Digger)
+        {
+            NumDiggers += AbilityCount;
+            DiggerCountText.text = "" + NumDiggers;
+        }
+        if (Ability == Abilities.Floater)
+        {
+            NumFloaters += AbilityCount;
+            FloaterCountText.text = "" + NumFloaters;
+        }
+        if (Ability == Abilities.Gnawer)
+        {
+            NumGnawers += AbilityCount;
+            GnawerCountText.text = "" + NumGnawers;
+        }
+        if (Ability == Abilities.Stopper)
+        {
+            NumStoppers += AbilityCount;
+            StopperCountText.text = "" + NumStoppers;
+        }
+    }
+
+    /** Spawn an effect when applying an ability. */
     private void SpawnParticleEffect(agent SelectedAgent)
     {
         GameObject ParticleClone = Instantiate(AbilityParticle, SelectedAgent.transform.position, Quaternion.identity) as GameObject;
     }
 
+    /** Set an ability on the selected agent. */
     public void SetAgentAbility(agent SelectedAgent)
     {
         if (CurrentAbility == Abilities.Digger && !SelectedAgent.Falling && SelectedAgent.FallSpeed < 0.01 && SelectedAgent.CanDig && NumDiggers > 0)
@@ -127,6 +169,21 @@ public class abilityHandler : MonoBehaviour
             SelectedAgent.ToggleGnawer();
         }
 
+        if (CurrentAbility == Abilities.Builder && !SelectedAgent.Falling)
+        {
+            if (SelectedAgent.Ability != Abilities.Builder && NumBuilders > 0 && SelectedAgent.ValidStepPosition())
+            {
+                NumBuilders -= 1;
+                BuilderCountText.text = "" + NumBuilders;
+                SpawnParticleEffect(SelectedAgent);
+                if (SelectedAgent.Ability == Abilities.Stopper)
+                    SelectedAgent.ToggleStopper();
+                SelectedAgent.ToggleBuilder(true);
+            }
+            else
+                SelectedAgent.ToggleBuilder(false);
+        }
+
         if (CurrentAbility == Abilities.Floater && NumFloaters > 0)
         {
             if (SelectedAgent.Ability != Abilities.Floater)
@@ -146,11 +203,13 @@ public class abilityHandler : MonoBehaviour
         NumGnawers = _InitGnawerCount;
         NumFloaters = _InitFloaterCount;
         NumStoppers = _InitStopperCount;
+        NumBuilders = _InitBuilderCount;
 
         DiggerCountText.text = "" + NumDiggers;
         GnawerCountText.text = "" + NumGnawers;
         FloaterCountText.text = "" + NumFloaters;
         StopperCountText.text = "" + NumStoppers;
+        BuilderCountText.text = "" + NumBuilders;
     }
 
     /** Sets the current ability that will get applied to the next selected agent. */
@@ -181,6 +240,12 @@ public class abilityHandler : MonoBehaviour
                     CurrentAbility = Abilities.None;
                 else
                     CurrentAbility = Abilities.Stopper;
+                break;
+            case "Builder":
+                if (CurrentAbility == Abilities.Builder)
+                    CurrentAbility = Abilities.None;
+                else
+                    CurrentAbility = Abilities.Builder;
                 break;
             default:
                 break;
