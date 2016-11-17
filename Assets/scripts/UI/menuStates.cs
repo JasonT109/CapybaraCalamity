@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
-public class menuStates : MonoBehaviour {
-
+public class menuStates : MonoBehaviour
+{
     public bool isPaused = false;
     public GameObject abilityHandler;
     public GameObject abilityPanel;
@@ -94,33 +94,30 @@ public class menuStates : MonoBehaviour {
 
     public void resetGame()
     {
-        //find all agents and kill them
         GameObject[] agents = GameObject.FindGameObjectsWithTag("agent");
         foreach (GameObject a in agents)
-        {
             Destroy(a);
-        }
 
-        //remove all tunnels and holes
         GameObject[] tunnels = GameObject.FindGameObjectsWithTag("tunnel");
         foreach (GameObject t in tunnels)
-        {
             Destroy(t);
-        }
 
         GameObject[] holes = GameObject.FindGameObjectsWithTag("hole");
         foreach (GameObject h in holes)
-        {
             Destroy(h);
-        }
 
         GameObject[] steps = GameObject.FindGameObjectsWithTag("step");
         foreach (GameObject s in steps)
-        {
             Destroy(s);
+
+        GameObject[] exitPoints = GameObject.FindGameObjectsWithTag("exit");
+        foreach (GameObject e in exitPoints)
+        {
+            exitPoint exitPointScript = e.GetComponent<exitPoint>();
+            exitPointScript.Reset();
         }
 
-        //reset pickups
+        //respawn all the pickups
         RespawnPickups();
 
         //reset abilities count
@@ -147,7 +144,6 @@ public class menuStates : MonoBehaviour {
         }
         else
         {
-            //turn off results screen if it is active
             resultsScreen = false;
             resultsPanel.SetActive(false);
             abilityPanel.SetActive(true);

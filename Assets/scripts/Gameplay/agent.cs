@@ -451,6 +451,9 @@ public class agent : MonoBehaviour
             var uiScript = UIScore.GetComponent<uiScore>();
             uiScript.addSavedUnit();
 
+            exitPoint exitPointScript = trigger.gameObject.GetComponent<exitPoint>();
+            exitPointScript.SpawnParticleEffect(transform.position);
+
             Destroy(gameObject);
         }
 
