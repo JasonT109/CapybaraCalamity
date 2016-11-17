@@ -8,6 +8,7 @@ using TouchScript.Hit;
 public class cameraControl : MonoBehaviour
 {
     public float Speed = 0.1F;
+    public float MaxTouchDelta = 0.2f;
     public Vector3 CameraMinTranslate = new Vector3(-2, -2, -5);
     public Vector3 CameraMaxTranslate = new Vector3(2, 2, 5);
     public LayerMask CameraLayerMask;
@@ -26,6 +27,14 @@ public class cameraControl : MonoBehaviour
     private float _ScaleDelta;
     private bool _Transforming;
     private Vector3 _TouchDelta;
+
+    private float _TouchVelocity = 0;
+    private float _TouchSpeed = 0;
+    private float _TouchTargetSpeed;
+    private float _TouchSmoothTime = 0;
+    private Vector3 _PreviousDelta = Vector3.zero;
+
+    public Vector3 screenPos;
 
     private void OnEnable()
     {
@@ -86,21 +95,35 @@ public class cameraControl : MonoBehaviour
     {
         if (_Transforming)
         {
-            if (_PreviousHit == Vector3.zero)
-                { _PreviousHit = _CurrentHit; return; }
-
-            _TouchDelta = new Vector3(_PreviousHit.x - _CurrentHit.x, _PreviousHit.y - _CurrentHit.y, 0) * Speed;
-
-            _PreviousHit = _CurrentHit;
-
-            _MainCamera.transform.localPosition += new Vector3(_TouchDelta.x, _TouchDelta.y, 0);
-
-            float Zoom = _MainCamera.transform.localPosition.z * _ScaleDelta;
-
-            _MainCamera.transform.localPosition = new Vector3(
-                Mathf.Clamp(_MainCamera.transform.localPosition.x, CameraMinTranslate.x, CameraMaxTranslate.x), 
-                Mathf.Clamp(_MainCamera.transform.localPosition.y, CameraMinTranslate.y, CameraMaxTranslate.y),
-                Mathf.Clamp(Zoom, CameraMinTranslate.z, CameraMaxTranslate.z));
+            _TouchTargetSpeed = Speed;
+            _TouchSmoothTime = 0;
         }
+        else
+        {
+            _TouchTargetSpeed = 0;
+            _TouchSmoothTime = 0.9f;
+        }
+
+        _TouchSpeed = Mathf.SmoothDamp(_TouchSpeed, _TouchTargetSpeed, ref _TouchVelocity, _TouchSmoothTime);
+
+        if (_PreviousHit == Vector3.zero)
+            { _PreviousHit = _CurrentHit; return; }
+
+        _TouchDelta = new Vector3(_PreviousHit.x - _CurrentHit.x, _PreviousHit.y - _CurrentHit.y, 0) * _TouchSpeed;
+        if (_TouchDelta.magnitude > MaxTouchDelta)
+            _TouchDelta = _PreviousDelta;
+
+        _PreviousHit = _CurrentHit;
+
+        _MainCamera.transform.localPosition += new Vector3(_TouchDelta.x, _TouchDelta.y, 0);
+
+        float Zoom = _MainCamera.transform.localPosition.z * _ScaleDelta;
+
+        _MainCamera.transform.localPosition = new Vector3(
+            Mathf.Clamp(_MainCamera.transform.localPosition.x, CameraMinTranslate.x, CameraMaxTranslate.x), 
+            Mathf.Clamp(_MainCamera.transform.localPosition.y, CameraMinTranslate.y, CameraMaxTranslate.y),
+            Mathf.Clamp(Zoom, CameraMinTranslate.z, CameraMaxTranslate.z));
+
+        _PreviousDelta = _TouchDelta;
     }
 }
