@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
@@ -30,9 +31,23 @@ public class menuStates : MonoBehaviour
     }
 
     private List<Pickup> Pickups = new List<Pickup>();
+    //private string[] _AllAbilities = { "digger", "gnawer", "floater", "stopper", "builder" };
 
     void Start()
     {
+        if (!abilityHandler)
+            abilityHandler = GameObject.FindGameObjectWithTag("AbilityHandler");
+
+        /*
+        GameObject[] AbilityToggles = new GameObject[abilityPanel.transform.childCount];
+        for (int i = 0; i < AbilityToggles.Length; i++)
+        {
+            AbilityToggles[i] = abilityPanel.transform.GetChild(i).gameObject;
+            Toggle t = AbilityToggles[i].GetComponent<Toggle>();
+            t.onValueChanged.AddListener(delegate { abilityHandler.GetComponent<abilityHandler>().SetAbility(_AllAbilities[i]); });
+            Debug.Log("Assigned listener to: " + t);
+        }
+        */
         resultsPanel.SetActive(false);
         star1.SetActive(false);
         star2.SetActive(false);
@@ -159,11 +174,10 @@ public class menuStates : MonoBehaviour
 
     public void showResults(int stars)
     {
+        float _UITimer = 0;
+
         resultsScreen = true;
         StartCoroutine(doScale(0.1f, resultsPanel, 0.1f));
-        StartCoroutine(doScale(1.4f, nextButton, 0.01f));
-        StartCoroutine(doScale(1.6f, resetButton2, 0.01f));
-        StartCoroutine(doScale(1.7f, homeButton2, 0.01f));
         abilityPanel.SetActive(false);
         pauseButton.SetActive(false);
 
@@ -175,12 +189,14 @@ public class menuStates : MonoBehaviour
         {
             resultsText.text = "Level Complete!";
             StartCoroutine(doScale(0.6f, star1, 5.0f));
+            _UITimer += 0.6f;
         }
         else if (stars == 2)
         {
             resultsText.text = "Level Complete!";
             StartCoroutine(doScale(0.6f, star1, 5.0f));
             StartCoroutine(doScale(0.9f, star2, 5.0f));
+            _UITimer += 0.9f;
         }
         else if (stars == 3)
         {
@@ -188,7 +204,17 @@ public class menuStates : MonoBehaviour
             StartCoroutine(doScale(0.6f, star1, 5.0f));
             StartCoroutine(doScale(0.9f, star2, 5.0f));
             StartCoroutine(doScale(1.2f, star3, 5.0f));
+            _UITimer += 1.2f;
         }
+        if (stars > 0)
+        {
+            StartCoroutine(doScale(_UITimer + 0.2f, nextButton, 0.01f));
+            _UITimer += 0.2f;
+        }
+
+        StartCoroutine(doScale(_UITimer + 0.2f, resetButton2, 0.01f));
+        StartCoroutine(doScale(_UITimer + 0.4f, homeButton2, 0.01f));
+
     }
 
     IEnumerator doScale(float waitTime, GameObject uiItem, float scaleFactor)

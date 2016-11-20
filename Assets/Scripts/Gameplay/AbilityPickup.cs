@@ -9,6 +9,6 @@ public class AbilityPickup : MonoBehaviour
 
     public void SpawnParticleEffect()
     {
-        GameObject ParticleClone = Instantiate(ParticleEffect, transform.position, Quaternion.identity) as GameObject;
+        Instantiate(ParticleEffect, transform.position, Quaternion.identity);
     }
 }

@@ -10,7 +10,7 @@ public class exitPoint : MonoBehaviour
 
     public void SpawnParticleEffect(Vector3 AgentPosition)
     {
-        GameObject ParticleClone = Instantiate(ParticleEffect, AgentPosition, Quaternion.identity) as GameObject;
+        Instantiate(ParticleEffect, AgentPosition, Quaternion.identity);
         NumberSaved++;
 
         if (NumberSaved > 0)

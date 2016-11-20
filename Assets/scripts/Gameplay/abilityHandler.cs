@@ -120,7 +120,7 @@ public class abilityHandler : MonoBehaviour
     /** Spawn an effect when applying an ability. */
     private void SpawnParticleEffect(agent SelectedAgent)
     {
-        GameObject ParticleClone = Instantiate(AbilityParticle, SelectedAgent.transform.position, Quaternion.identity) as GameObject;
+        Instantiate(AbilityParticle, SelectedAgent.transform.position, Quaternion.identity);
     }
 
     /** Set an ability on the selected agent. */
