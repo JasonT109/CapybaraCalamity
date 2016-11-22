@@ -17,9 +17,6 @@ public class abilityHandler : MonoBehaviour
     public GameObject HolePrefab;
     public GameObject AbilityParticle;
 
-    [HideInInspector]
-    public Vector3 HoleOffset = new Vector3(0, 0.145f, 0);
-
     public enum Abilities
     {
         None,
@@ -131,7 +128,7 @@ public class abilityHandler : MonoBehaviour
             if (SelectedAgent.Ability == Abilities.Stopper)
                 SelectedAgent.ToggleStopper();
 
-            GameObject HoleClone = Instantiate(HolePrefab, SelectedAgent.transform.position - HoleOffset, Quaternion.identity) as GameObject;
+            GameObject HoleClone = Instantiate(HolePrefab, SelectedAgent.transform.position, Quaternion.identity) as GameObject;
 
             var HoleScript = HoleClone.GetComponentInChildren<createHole>();
             HoleScript.digger = SelectedAgent.transform.gameObject;

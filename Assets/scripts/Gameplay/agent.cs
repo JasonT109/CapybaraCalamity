@@ -323,17 +323,12 @@ public class agent : MonoBehaviour
         if (CollisionInfo.collider.tag != "step")
         {
             Ray ray = new Ray(new Vector3(transform.position.x, transform.position.y + MinStepHeight, transform.position.z), MoveDir);
-
-            Debug.DrawRay(ray.origin, ray.direction, Color.blue, 5f, false);
-
             RaycastHit hit;
 
             string[] Layers = { "trunk", "stopper", "branch" };
 
             if (Physics.Raycast(ray.origin, ray.direction, out hit, RayDistance, LayerMask.GetMask(Layers)))
             {
-                Debug.Log("Hit an obstacle: " + hit.transform.name);
-
                 if (MoveDir.x > 0)
                 {
                     MoveDir.x = -1;
