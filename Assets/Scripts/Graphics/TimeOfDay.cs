@@ -7,6 +7,8 @@ public class TimeOfDay : MonoBehaviour
     [Header("Sun setup")]
     public Light Sun;
     public Gradient SunColor;
+    public Renderer SunGeoMat;
+    public Light SunPointLight;
     [Range(0, 360)]
     public int SunOrientationOffset;
 
@@ -19,11 +21,16 @@ public class TimeOfDay : MonoBehaviour
     [Header("Skybox setup")]
     public Material SkyBoxMaterial;
     public Gradient SkyBoxColor;
+    public GameObject SunMoonGeoRoot;
 
     [Header("Nightsky setup")]
     public GameObject NightSky;
     public Gradient NightSkyColor;
     public float NightSkySpeed = 0.4f;
+
+    [Header("Clouds setup")]
+    public Renderer CloudRenderer;
+    public Gradient CloudColor;
 
     [Header("Time setup")]
     [Range(0, 24)]
@@ -71,6 +78,9 @@ public class TimeOfDay : MonoBehaviour
 
         Sun.color = CurrentColor(SunColor, NormalisedTime(TheTime));
         Sun.transform.rotation = Quaternion.Euler(new Vector3(CurrentDirection(Ntime, SunOrientationOffset), SunOrientation.y, SunOrientation.z));
+        SunGeoMat.material.SetColor("_TintColor", CurrentColor(SunColor, NormalisedTime(TheTime)));
+        SunMoonGeoRoot.transform.rotation = Quaternion.Euler(new Vector3(CurrentDirection(Ntime, 0), 90, 0));
+        SunPointLight.color = Sun.color;
 
         Moon.color = CurrentColor(MoonColor, NormalisedTime(TheTime));
         Moon.transform.rotation = Quaternion.Euler(new Vector3(CurrentDirection(Ntime, MoonOrientationOffset), MoonOrientation.y, MoonOrientation.z));
@@ -84,5 +94,7 @@ public class TimeOfDay : MonoBehaviour
         Renderer r = NightSky.GetComponent<Renderer>();
         r.material.SetColor("_TintColor", CurrentColor(NightSkyColor, Ntime));
         NightSky.transform.rotation = Quaternion.Euler(new Vector3(CurrentDirection(NormalisedTime(NightSkyTime), 0), 90, -90));
+
+        CloudRenderer.material.SetColor("_TintColor", CurrentColor(CloudColor, Ntime));
     }
 }
