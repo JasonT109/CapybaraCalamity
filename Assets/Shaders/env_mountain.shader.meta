@@ -1,12 +1,13 @@
 fileFormatVersion: 2
 guid: 26bc9a2937b39a74ea995eb7069e02e5
-timeCreated: 1479875040
+timeCreated: 1480033335
 licenseType: Free
 ShaderImporter:
   defaultTextures:
   - _SnowDiffuse: {fileID: 2800000, guid: 129240abd50f6804bb1ede2bb084d25a, type: 3}
   - _RockDiffuse: {fileID: 2800000, guid: 3c90807ca57d9914b8a0e9b524616576, type: 3}
   - _ForestDiffuse: {fileID: 2800000, guid: 9db591f21a5ae514194fd09c7300c5ab, type: 3}
+  - _ForestNormal: {fileID: 2800000, guid: ff798018777c17d49a720506fd6c9df6, type: 3}
   - _RockNormal: {fileID: 2800000, guid: 11cb714188e71be4aa0b424b374a40aa, type: 3}
   - _SnowNormal: {fileID: 2800000, guid: 4e817727ad23ad74795b82d50a6553e3, type: 3}
   userData: 
