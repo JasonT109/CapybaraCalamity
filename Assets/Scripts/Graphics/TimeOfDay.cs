@@ -63,8 +63,8 @@ public class TimeOfDay : MonoBehaviour
 
     void Start ()
     {
-        SunOrientation = Sun.transform.localEulerAngles;
-        MoonOrientation = Moon.transform.localEulerAngles;
+        SunOrientation = Sun.transform.eulerAngles;
+        MoonOrientation = Moon.transform.eulerAngles;
         RenderSettings.skybox = SkyBoxMaterial;
     }
 
