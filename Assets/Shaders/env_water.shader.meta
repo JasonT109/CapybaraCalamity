@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: bca0d94efea75394fb39a508d0ac09a3
-timeCreated: 1480037138
-licenseType: Free
+timeCreated: 1490488725
+licenseType: Pro
 ShaderImporter:
   defaultTextures:
   - _WaterNormal: {fileID: 2800000, guid: ad4959c21e5aef24d9b5d2c759af1331, type: 3}

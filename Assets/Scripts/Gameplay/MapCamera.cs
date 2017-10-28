@@ -24,6 +24,7 @@ public class MapCamera : MonoBehaviour
     public Vector3 _TouchDelta;
     private Vector3 _PreviousDelta = Vector3.zero;
     private Vector3 _ViewAngle = Vector3.zero;
+    public GameObject FrontEndUI;
 
     private void OnEnable()
     {
@@ -42,6 +43,8 @@ public class MapCamera : MonoBehaviour
         TouchHit hit;
         gesture.GetTargetHitResult(out hit);
 
+        if (FrontEndUI)
+            FrontEndUI.GetComponent<uiFrontEnd>().DismissDialog();
         _Touches = gesture.NumTouches;
         _CurrentHit = hit.Point;
 
@@ -52,6 +55,7 @@ public class MapCamera : MonoBehaviour
     void Start ()
     {
         _MainCamera = Camera.main;
+        FrontEndUI = GameObject.FindGameObjectWithTag("UI");
     }
 
     void Update()

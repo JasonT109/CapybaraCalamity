@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 26bc9a2937b39a74ea995eb7069e02e5
-timeCreated: 1480033335
-licenseType: Free
+timeCreated: 1490486886
+licenseType: Pro
 ShaderImporter:
   defaultTextures:
   - _SnowDiffuse: {fileID: 2800000, guid: 129240abd50f6804bb1ede2bb084d25a, type: 3}

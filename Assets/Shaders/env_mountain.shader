@@ -39,7 +39,7 @@ Shader "Shader Forge/env_mountain" {
             #include "AutoLight.cginc"
             #pragma multi_compile_fwdbase_fullshadows
             #pragma multi_compile_fog
-            #pragma exclude_renderers gles3 metal d3d11_9x xbox360 xboxone ps3 ps4 psp2 
+            #pragma exclude_renderers metal d3d11_9x xbox360 xboxone ps3 ps4 psp2 
             #pragma target 3.0
             uniform float4 _LightColor0;
             uniform sampler2D _SnowDiffuse; uniform float4 _SnowDiffuse_ST;
@@ -111,12 +111,10 @@ Shader "Shader Forge/env_mountain" {
                 float4 _ForestDiffuse_var = tex2D(_ForestDiffuse,TRANSFORM_TEX(i.uv0, _ForestDiffuse));
                 float4 _RockDiffuse_var = tex2D(_RockDiffuse,TRANSFORM_TEX(i.uv0, _RockDiffuse));
                 float4 _SnowDiffuse_var = tex2D(_SnowDiffuse,TRANSFORM_TEX(i.uv0, _SnowDiffuse));
-                float3 node_4892 = lerp(_ForestDiffuse_var.rgb,lerp(_RockDiffuse_var.rgb,_SnowDiffuse_var.rgb,node_176),node_3098);
-                float3 diffuseColor = node_4892;
+                float3 diffuseColor = lerp(_ForestDiffuse_var.rgb,lerp(_RockDiffuse_var.rgb,_SnowDiffuse_var.rgb,node_176),node_3098);
                 float3 diffuse = (directDiffuse + indirectDiffuse) * diffuseColor;
 ////// Emissive:
-                float node_4388 = pow(1.0-max(0,dot(i.normalDir, viewDirection)),_FresnelExponent);
-                float3 emissive = ((_FresnelColor.rgb*node_4388)*_FresnelPower);
+                float3 emissive = ((_FresnelColor.rgb*pow(1.0-max(0,dot(i.normalDir, viewDirection)),_FresnelExponent))*_FresnelPower);
 /// Final Color:
                 float3 finalColor = diffuse + emissive;
                 fixed4 finalRGBA = fixed4(finalColor,1);
@@ -141,7 +139,7 @@ Shader "Shader Forge/env_mountain" {
             #include "AutoLight.cginc"
             #pragma multi_compile_fwdadd_fullshadows
             #pragma multi_compile_fog
-            #pragma exclude_renderers gles3 metal d3d11_9x xbox360 xboxone ps3 ps4 psp2 
+            #pragma exclude_renderers metal d3d11_9x xbox360 xboxone ps3 ps4 psp2 
             #pragma target 3.0
             uniform float4 _LightColor0;
             uniform sampler2D _SnowDiffuse; uniform float4 _SnowDiffuse_ST;
@@ -211,8 +209,7 @@ Shader "Shader Forge/env_mountain" {
                 float4 _ForestDiffuse_var = tex2D(_ForestDiffuse,TRANSFORM_TEX(i.uv0, _ForestDiffuse));
                 float4 _RockDiffuse_var = tex2D(_RockDiffuse,TRANSFORM_TEX(i.uv0, _RockDiffuse));
                 float4 _SnowDiffuse_var = tex2D(_SnowDiffuse,TRANSFORM_TEX(i.uv0, _SnowDiffuse));
-                float3 node_4892 = lerp(_ForestDiffuse_var.rgb,lerp(_RockDiffuse_var.rgb,_SnowDiffuse_var.rgb,node_176),node_3098);
-                float3 diffuseColor = node_4892;
+                float3 diffuseColor = lerp(_ForestDiffuse_var.rgb,lerp(_RockDiffuse_var.rgb,_SnowDiffuse_var.rgb,node_176),node_3098);
                 float3 diffuse = directDiffuse * diffuseColor;
 /// Final Color:
                 float3 finalColor = diffuse;
