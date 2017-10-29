@@ -26,9 +26,9 @@ namespace mapping
                     //get info from json file
                     
                     string line = reader.ReadLine();
-                    Debug.Log("Line:" + line);
+                    //Debug.Log("Line:" + line);
                     mapLoadData InputData = mapLoadData.CreateFromJSON(line);
-                    Debug.Log("Read data from file:" + InputData.Content);
+                    //Debug.Log("Read data from file:" + InputData.Content);
 
                     //add to new gridPiece
                     gridPiece InputPiece = new gridPiece();

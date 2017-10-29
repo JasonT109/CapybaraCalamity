@@ -35,10 +35,45 @@ namespace mapping
         private Vector2 gridSize;
 
         [SerializeField]
-        private float gridSpacing = 0.02f;
+        private float gridSpacing = 0.3f;
+
+        [SerializeField]
+        private bool drawGrid = true;
+
+        [SerializeField]
+        private Color gridColor = new Color(0.2f, 0.2f, 0.2f, 1);
+
+        private void AddGridLine(Vector3 StartPosition, Vector3 EndPosition)
+        {
+            GameObject newLine = new GameObject();
+            newLine.name = "gridLine";
+            newLine.transform.parent = gameObject.transform;
+            LineRenderer line = newLine.AddComponent<LineRenderer>();
+
+            line.material = new Material(Shader.Find("Particles/Additive"));
+            line.SetColors(gridColor, gridColor);
+
+            line.SetVertexCount(2);
+            line.SetWidth(0.02f, 0.02f);
+            line.SetPosition(0, StartPosition);
+            line.SetPosition(1, EndPosition);
+        }
 
         void Start()
         {
+            if (drawGrid)
+            {
+                for (int y = 0; y <= gridSize.y; y++)
+                {
+                    AddGridLine(new Vector3(0 - (gridSpacing * 0.5f), y * gridSpacing - (gridSpacing * 0.5f), 0), new Vector3(gridSize.x * gridSpacing - (gridSpacing * 0.5f), y * gridSpacing - (gridSpacing * 0.5f), 0));
+                }
+
+                for (int x = 0; x <= gridSize.x; x++)
+                {
+                    AddGridLine(new Vector3((x * gridSpacing) - (gridSpacing * 0.5f), 0 - (gridSpacing * 0.5f), 0), new Vector3((x * gridSpacing) - (gridSpacing * 0.5f), gridSize.y * gridSpacing - (gridSpacing * 0.5f), 0));
+                }
+            }
+
             //initialise the grid
             gridContents = new Contents[(int)(gridSize.x * gridSize.y)];
 
@@ -48,7 +83,7 @@ namespace mapping
                 //load the data from file
                 if(mapData.ReadMapData())
                 {
-                    Debug.Log("Found map data.");
+                    //Debug.Log("Found map data.");
                     for (int i = 0; i < mapData.gridData.Count; i++)
                     {
                         Vector2 mPosition = mapData.gridData[i].gPosition;

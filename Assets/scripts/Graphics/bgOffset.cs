@@ -11,7 +11,7 @@ public class bgOffset : MonoBehaviour
         GameCamera = Camera.main;
     }
 
-	void Update ()
+	void LateUpdate ()
     {
         transform.position = new Vector3 (GameCamera.transform.position.x * offsetValue, GameCamera.transform.position.y * offsetValue, transform.position.z);
 	}
