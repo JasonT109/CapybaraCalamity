@@ -9,8 +9,8 @@ namespace mapping
     public class mapData : MonoBehaviour
     {
         public string mapName = "newMap1";
-        public Vector2 gridSize;
-        public List<gridPiece> gridData = new List<gridPiece>();
+        //public Vector2 gridSize;
+        public List<gridTile> gridData = new List<gridTile>();
 
         private string path = "Assets/Resources/";
 
@@ -31,7 +31,7 @@ namespace mapping
                     //Debug.Log("Read data from file:" + InputData.Content);
 
                     //add to new gridPiece
-                    gridPiece InputPiece = new gridPiece();
+                    gridTile InputPiece = new gridTile();
                     InputPiece.gPosition.x = InputData.PositionX;
                     InputPiece.gPosition.y = InputData.PositionY;
                     InputPiece.gContents = (mapGrid.Contents)InputData.Content;
@@ -67,8 +67,31 @@ namespace mapping
             }
         }
 
-        void Start()
+        public int AddGridTile(gridTile InputPiece)
         {
+            if (InputPiece.gContents == mapGrid.Contents.none)
+                gridData.Remove(InputPiece);
+            else
+                gridData.Add(InputPiece);
+
+            return gridData.Count;
+        }
+
+        public void RemoveGridTile(gridTile InputPiece)
+        {
+            gridData.Remove(InputPiece);
+        }
+
+        public gridTile GetGridTileFromPosition(Vector2 _GridPosition)
+        {
+            gridTile ReturnTile = new gridTile();
+            for (int i = 0; i < gridData.Count; i++)
+            {
+                if (gridData[i].gPosition == _GridPosition)
+                    ReturnTile = gridData[i];
+            }
+
+            return ReturnTile;
         }
     }
 }

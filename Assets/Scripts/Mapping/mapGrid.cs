@@ -3,10 +3,11 @@ using System.Collections;
 
 namespace mapping
 {
-    public class gridPiece
+    public class gridTile
     {
         public Vector2 gPosition;
         public mapGrid.Contents gContents;
+        public GameObject gObject;
     }
 
     public class mapGrid : MonoBehaviour
@@ -16,26 +17,22 @@ namespace mapping
             none,
             branch,
             trunk,
+            spawner,
+            nest,
             pickup,
+            decoration
         };
 
-        [SerializeField]
-        private mapData mapData;
-
-        [SerializeField]
-        private GameObject branch;
-
-        [SerializeField]
-        private GameObject trunk;
+        public mapData mapData;
+        public GameObject branch;
+        public GameObject trunk;
 
         //grid
         private Contents[] gridContents;
 
-        [SerializeField]
-        private Vector2 gridSize;
+        public Vector2 gridSize;
 
-        [SerializeField]
-        private float gridSpacing = 0.3f;
+        public float gridSpacing = 0.3f;
 
         [SerializeField]
         private bool drawGrid = true;
@@ -103,6 +100,9 @@ namespace mapping
                             NewObject = Instantiate(trunk, new Vector3(gridSpacing * mPosition.x, gridSpacing * mPosition.y, 0), Quaternion.identity) as GameObject;
                         }
 
+                        //add the spawned object to the map data
+                        mapData.gridData[i].gObject = NewObject;
+
                         //set properties of object
                         if (NewObject != null)
                         {
@@ -115,19 +115,7 @@ namespace mapping
                 {
                     Debug.Log("No map data found.");
                 }
-
-
-                //test save file
-                //mapData.WriteMapData();
-                //mapData.ReadMapData();
             }
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-
         }
     }
 }

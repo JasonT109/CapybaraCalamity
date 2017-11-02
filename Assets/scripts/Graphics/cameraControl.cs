@@ -20,7 +20,7 @@ public class cameraControl : MonoBehaviour
     private ReleaseGesture _ReleaseGesture;
     private int _Touches;
     public float _ScaleDelta = 1;
-
+    public float MouseZoomSpeed = 2f;
     public Vector3 screenPos;
 
     private void OnEnable()
@@ -91,7 +91,7 @@ public class cameraControl : MonoBehaviour
             _MainCamera.transform.localPosition = new Vector3(
                 _MainCamera.transform.localPosition.x, 
                 _MainCamera.transform.localPosition.y,
-                Mathf.Clamp(_MainCamera.transform.localPosition.z + 0.5f, CameraMinTranslate.z, CameraMaxTranslate.z));
+                Mathf.Clamp(_MainCamera.transform.localPosition.z + MouseZoomSpeed, CameraMinTranslate.z, CameraMaxTranslate.z));
         }
         else if (ScrollDelta < 0f)
         {
@@ -99,7 +99,7 @@ public class cameraControl : MonoBehaviour
             _MainCamera.transform.localPosition = new Vector3(
                 _MainCamera.transform.localPosition.x,
                 _MainCamera.transform.localPosition.y,
-                Mathf.Clamp(_MainCamera.transform.localPosition.z - 0.5f, CameraMinTranslate.z, CameraMaxTranslate.z));
+                Mathf.Clamp(_MainCamera.transform.localPosition.z - MouseZoomSpeed, CameraMinTranslate.z, CameraMaxTranslate.z));
         }
     }
 }
