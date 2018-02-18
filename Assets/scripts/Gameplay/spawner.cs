@@ -1,13 +1,17 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using mapping;
 
 public class spawner : MonoBehaviour
 {
+    private mapGrid MapGrid;
+
     [Header("Prefab configuration:")]
     public GameObject agent;
     public GameObject crateMesh;
     public Animator crateAnimator;
+    public bool isEditor = false;
 
     [Header("Spawner configuration:")]
     public int numberOfAgents = 10;
@@ -26,14 +30,20 @@ public class spawner : MonoBehaviour
 
     void Start()
     {
-        _InitNumAgents = numberOfAgents;
-        _uiScore = GameObject.FindGameObjectWithTag("UI");
-        var scoreScript = _uiScore.gameObject.GetComponent<uiScore>();
-        scoreScript.totalNumAgents += numberOfAgents;
-        _CurrentTime = Time.timeSinceLevelLoad;
-        _SpawnTime = _CurrentTime + timeToFirstSpawn;
-        _CountDown = timeToFirstSpawn;
-        crateAnimator = crateMesh.GetComponent<Animator>();
+        MapGrid = (mapGrid)FindObjectOfType(typeof(mapGrid));
+        if (MapGrid != null)
+            isEditor = true;
+        if (!isEditor)
+        {
+            _InitNumAgents = numberOfAgents;
+            _uiScore = GameObject.FindGameObjectWithTag("UI");
+            var scoreScript = _uiScore.gameObject.GetComponent<uiScore>();
+            scoreScript.totalNumAgents += numberOfAgents;
+            _CurrentTime = Time.timeSinceLevelLoad;
+            _SpawnTime = _CurrentTime + timeToFirstSpawn;
+            _CountDown = timeToFirstSpawn;
+            crateAnimator = crateMesh.GetComponent<Animator>();
+        }
     }
 
     public void ResetSpawner()
@@ -47,23 +57,26 @@ public class spawner : MonoBehaviour
 
     void Update()
     {
-        _CurrentTime += Time.deltaTime;
-        _CountDown -= Time.deltaTime;
-
-        if (_CountDown > 0.5f)
-            countDownText = ("" + Mathf.Round(_CountDown));
-        else if (_CountDown <= 0.5f && _CountDown > -1.0f)
-            countDownText = ("Here they come!");
-        else
-            countDownText = ("");
-        
-        if (_CurrentTime > _SpawnTime & _CanSpawn & numberOfAgents > 0)
+        if (!isEditor)
         {
-            _CanSpawn = false;
-            StartCoroutine("WaitAndSpawn", timeInterval);
-        }
+            _CurrentTime += Time.deltaTime;
+            _CountDown -= Time.deltaTime;
 
-        coundDownTextObject.text = countDownText;
+            if (_CountDown > 0.5f)
+                countDownText = ("" + Mathf.Round(_CountDown));
+            else if (_CountDown <= 0.5f && _CountDown > -1.0f)
+                countDownText = ("Here they come!");
+            else
+                countDownText = ("");
+        
+            if (_CurrentTime > _SpawnTime & _CanSpawn & numberOfAgents > 0)
+            {
+                _CanSpawn = false;
+                StartCoroutine("WaitAndSpawn", timeInterval);
+            }
+
+            coundDownTextObject.text = countDownText;
+        }
     }
 
     IEnumerator WaitAndSpawn(float waitTime)

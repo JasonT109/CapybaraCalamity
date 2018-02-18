@@ -25,10 +25,10 @@ public class MapPoint : MonoBehaviour
     private void PressHandler(object sender, EventArgs e)
     {
         var gesture = sender as PressGesture;
-        TouchHit hit;
-        gesture.GetTargetHitResult(out hit);
+        HitData hit = gesture.GetScreenPositionHitData();
+        Transform T = hit.Target.transform;
 
-        if (hit.Transform.gameObject == gameObject)
+        if (T.gameObject == gameObject)
         {
             var FrontEndScript = FrontEndUI.GetComponent<uiFrontEnd>();
             FrontEndScript.OpenDialog();

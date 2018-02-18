@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using TouchScript.Layers;
 using TouchScript.Gestures;
+using TouchScript.Gestures.TransformGestures;
 using TouchScript.Hit;
 
 public class cameraControl : MonoBehaviour
@@ -44,21 +45,20 @@ public class cameraControl : MonoBehaviour
 
     private void PressHandler(object sender, EventArgs e)
     {
-        _MainCamera.GetComponent<CameraLayer>().LayerMask = CameraLayerMask;
+        //_MainCamera.GetComponent<CameraLayer>().LayerMask = CameraLayerMask;
     }
 
     private void ReleaseHandler(object sender, EventArgs e)
     {
-        _MainCamera.GetComponent<CameraLayer>().LayerMask = DefaultLayerMask;
+        //_MainCamera.GetComponent<CameraLayer>().LayerMask = DefaultLayerMask;
     }
 
     private void TransformHandler(object sender, EventArgs e)
     {
         var gesture = sender as TransformGesture;
-        TouchHit hit;
-        gesture.GetTargetHitResult(out hit);
+        //HitData hit = gesture.GetScreenPositionHitData();
 
-        _Touches = gesture.NumTouches;
+        _Touches = gesture.NumPointers;
 
         _MainCamera.transform.localPosition -= new Vector3(gesture.DeltaPosition.x, gesture.DeltaPosition.y, 0);
 
@@ -79,7 +79,7 @@ public class cameraControl : MonoBehaviour
     void Start()
     {
         _MainCamera = Camera.main;
-        _MainCamera.GetComponent<CameraLayer>().LayerMask = DefaultLayerMask;
+        //_MainCamera.GetComponent<CameraLayer>().LayerMask = DefaultLayerMask;
     }
 
     void Update()

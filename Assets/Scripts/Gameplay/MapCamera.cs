@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using TouchScript.Gestures;
+using TouchScript.Gestures.TransformGestures;
 using TouchScript.Hit;
 
 public class MapCamera : MonoBehaviour
@@ -40,12 +41,11 @@ public class MapCamera : MonoBehaviour
     private void TransformHandler(object sender, EventArgs e)
     {
         var gesture = sender as TransformGesture;
-        TouchHit hit;
-        gesture.GetTargetHitResult(out hit);
+        HitData hit = gesture.GetScreenPositionHitData();
 
         if (FrontEndUI)
             FrontEndUI.GetComponent<uiFrontEnd>().DismissDialog();
-        _Touches = gesture.NumTouches;
+        _Touches = gesture.NumPointers;//gesture.NumTouches;
         _CurrentHit = hit.Point;
 
         if (_Touches == 2)

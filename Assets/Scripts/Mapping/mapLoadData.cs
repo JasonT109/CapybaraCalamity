@@ -8,6 +8,8 @@ namespace mapping
     {
         public int PositionX;
         public int PositionY;
+        public int SizeX;
+        public int SizeY;
         public int Content;
 
         public static mapLoadData CreateFromJSON(string jsonString)

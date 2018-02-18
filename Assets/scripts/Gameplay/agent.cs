@@ -68,10 +68,9 @@ public class agent : MonoBehaviour
     private void PressHandler(object sender, EventArgs e)
     {
         var gesture = sender as PressGesture;
-        TouchHit hit;
-        gesture.GetTargetHitResult(out hit);
-
-        if (hit.Transform.gameObject == gameObject)
+        HitData hit = gesture.GetScreenPositionHitData();
+        Transform T = hit.Target.transform;
+        if (T.gameObject == gameObject)
             _AbilityHandler.SetAgentAbility(this);
     }
 
